@@ -1,0 +1,3 @@
+direct call ExecQuery=0x00000000 rows=present
+synchronous SendMessage ExecQuery=0x8001010d rows=null
+queued PostMessage ExecQuery=0x00000000 rows=present

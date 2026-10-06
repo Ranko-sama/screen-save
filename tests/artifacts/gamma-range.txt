@@ -1,0 +1,23 @@
+original_mid=32896 original_white=65535
+gain=1.00 set=1 read=1 matches=1 white=65535
+gain=0.95 set=1 read=1 matches=1 white=62258
+gain=0.90 set=1 read=1 matches=1 white=58981
+gain=0.85 set=1 read=1 matches=1 white=55704
+gain=0.80 set=1 read=1 matches=1 white=52428
+gain=0.75 set=1 read=1 matches=1 white=49151
+gain=0.70 set=1 read=1 matches=1 white=45874
+gain=0.65 set=1 read=1 matches=1 white=42597
+gain=0.60 set=1 read=1 matches=1 white=39321
+gain=0.55 set=1 read=1 matches=1 white=36044
+gain=0.50 set=1 read=1 matches=1 white=32767
+gain=0.45 set=0 read=1 matches=0 white=65535
+gain=0.40 set=0 read=1 matches=0 white=65535
+gain=0.35 set=0 read=1 matches=0 white=65535
+gain=0.30 set=0 read=1 matches=0 white=65535
+gain=0.25 set=0 read=1 matches=0 white=65535
+gain=0.20 set=0 read=1 matches=0 white=65535
+gain=0.15 set=0 read=1 matches=0 white=65535
+gain=0.10 set=0 read=1 matches=0 white=65535
+gain=0.05 set=0 read=1 matches=0 white=65535
+gain=0.00 set=0 read=1 matches=0 white=65535
+restored=1 exact=1

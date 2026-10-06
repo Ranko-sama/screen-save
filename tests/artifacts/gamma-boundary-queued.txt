@@ -1,0 +1,49 @@
+command=4 expected_white=65535 matrix=1.000 gamma_read=1 gamma_mid=32896 gamma_white=65535 execution=0
+command=1 expected_white=63896 matrix=1.000 gamma_read=1 gamma_mid=32073 gamma_white=63896 execution=3
+command=1 expected_white=62258 matrix=1.000 gamma_read=1 gamma_mid=31251 gamma_white=62258 execution=3
+command=1 expected_white=60619 matrix=1.000 gamma_read=1 gamma_mid=30428 gamma_white=60619 execution=3
+command=1 expected_white=58981 matrix=1.000 gamma_read=1 gamma_mid=29606 gamma_white=58981 execution=3
+command=1 expected_white=57343 matrix=1.000 gamma_read=1 gamma_mid=28784 gamma_white=57343 execution=3
+command=1 expected_white=55704 matrix=1.000 gamma_read=1 gamma_mid=27961 gamma_white=55704 execution=3
+command=1 expected_white=54066 matrix=1.000 gamma_read=1 gamma_mid=27139 gamma_white=54066 execution=3
+command=1 expected_white=52428 matrix=1.000 gamma_read=1 gamma_mid=26316 gamma_white=52428 execution=3
+command=1 expected_white=50789 matrix=1.000 gamma_read=1 gamma_mid=25494 gamma_white=50789 execution=3
+command=1 expected_white=49151 matrix=1.000 gamma_read=1 gamma_mid=24672 gamma_white=49151 execution=3
+command=1 expected_white=47512 matrix=1.000 gamma_read=1 gamma_mid=23849 gamma_white=47512 execution=3
+command=1 expected_white=45874 matrix=1.000 gamma_read=1 gamma_mid=23027 gamma_white=45874 execution=3
+command=1 expected_white=44236 matrix=1.000 gamma_read=1 gamma_mid=22204 gamma_white=44236 execution=3
+command=1 expected_white=42597 matrix=1.000 gamma_read=1 gamma_mid=21382 gamma_white=42597 execution=3
+command=1 expected_white=40959 matrix=1.000 gamma_read=1 gamma_mid=20560 gamma_white=40959 execution=3
+command=1 expected_white=39321 matrix=1.000 gamma_read=1 gamma_mid=19737 gamma_white=39321 execution=3
+command=1 expected_white=37682 matrix=1.000 gamma_read=1 gamma_mid=18915 gamma_white=37682 execution=3
+command=1 expected_white=36044 matrix=1.000 gamma_read=1 gamma_mid=18092 gamma_white=36044 execution=3
+command=1 expected_white=34405 matrix=1.000 gamma_read=1 gamma_mid=17270 gamma_white=34405 execution=3
+command=1 expected_white=32767 matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3
+command=1 expected_white=32767 matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3
+command=2 expected_white=34405 matrix=1.000 gamma_read=1 gamma_mid=17270 gamma_white=34405 execution=3
+command=2 expected_white=36044 matrix=1.000 gamma_read=1 gamma_mid=18092 gamma_white=36044 execution=3
+command=2 expected_white=37682 matrix=1.000 gamma_read=1 gamma_mid=18915 gamma_white=37682 execution=3
+command=2 expected_white=39321 matrix=1.000 gamma_read=1 gamma_mid=19737 gamma_white=39321 execution=3
+command=2 expected_white=40959 matrix=1.000 gamma_read=1 gamma_mid=20560 gamma_white=40959 execution=3
+command=2 expected_white=42597 matrix=1.000 gamma_read=1 gamma_mid=21382 gamma_white=42597 execution=3
+command=2 expected_white=44236 matrix=1.000 gamma_read=1 gamma_mid=22204 gamma_white=44236 execution=3
+command=2 expected_white=45874 matrix=1.000 gamma_read=1 gamma_mid=23027 gamma_white=45874 execution=3
+command=2 expected_white=47512 matrix=1.000 gamma_read=1 gamma_mid=23849 gamma_white=47512 execution=3
+command=2 expected_white=49151 matrix=1.000 gamma_read=1 gamma_mid=24672 gamma_white=49151 execution=3
+command=2 expected_white=50789 matrix=1.000 gamma_read=1 gamma_mid=25494 gamma_white=50789 execution=3
+command=2 expected_white=52428 matrix=1.000 gamma_read=1 gamma_mid=26316 gamma_white=52428 execution=3
+command=2 expected_white=54066 matrix=1.000 gamma_read=1 gamma_mid=27139 gamma_white=54066 execution=3
+command=5 expected_white=32767 matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3
+command=5 expected_white=54066 matrix=1.000 gamma_read=1 gamma_mid=27139 gamma_white=54066 execution=3
+command=2 expected_white=55704 matrix=1.000 gamma_read=1 gamma_mid=27961 gamma_white=55704 execution=3
+command=2 expected_white=57343 matrix=1.000 gamma_read=1 gamma_mid=28784 gamma_white=57343 execution=3
+command=2 expected_white=58981 matrix=1.000 gamma_read=1 gamma_mid=29606 gamma_white=58981 execution=3
+command=2 expected_white=60619 matrix=1.000 gamma_read=1 gamma_mid=30428 gamma_white=60619 execution=3
+command=2 expected_white=62258 matrix=1.000 gamma_read=1 gamma_mid=31251 gamma_white=62258 execution=3
+command=2 expected_white=63896 matrix=1.000 gamma_read=1 gamma_mid=32073 gamma_white=63896 execution=3
+command=2 expected_white=65535 matrix=1.000 gamma_read=1 gamma_mid=32896 gamma_white=65535 execution=0
+software_restored hardware=0
+command=2 expected_white=65535 matrix=1.000 gamma_read=1 gamma_mid=32896 gamma_white=65535 execution=0
+next_up hardware=5
+PASS: 20 steps, lower cap, toggle saved level, software-first restore, hardware handoff
+hardware_restored=100

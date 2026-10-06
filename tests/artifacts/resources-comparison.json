@@ -1,0 +1,23 @@
+[
+  {
+    "metric": "dwm_cpu_one_core_pct",
+    "normal": 14.66360122331257,
+    "black": 12.717223935508562,
+    "delta": -1.9463772878040082,
+    "delta_percent": -13.27352850205451
+  },
+  {
+    "metric": "dwm_private_working_bytes",
+    "normal": 451224234.6666667,
+    "black": 478231483.73333335,
+    "delta": 27007249.066666663,
+    "delta_percent": 5.985327691146236
+  },
+  {
+    "metric": "dwm_gpu_engine_sum_mean_pct",
+    "normal": 20.642031745139164,
+    "black": 30.133237295183513,
+    "delta": 9.491205550044349,
+    "delta_percent": 45.97999686866754
+  }
+]

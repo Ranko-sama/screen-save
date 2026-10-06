@@ -1,0 +1,166 @@
+{
+  "off": {
+    "resource_rounds": 3,
+    "browser_rounds": 3,
+    "app_cpu_pct": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "app_private": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "app_working": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "dwm_cpu_pct": {
+      "median": 2.5002433444348453,
+      "min": 1.224532008827176,
+      "max": 4.542309981140836
+    },
+    "dwm_private": {
+      "median": 414282683.73333335,
+      "min": 412852770.1333333,
+      "max": 456798208
+    },
+    "dwm_gpu": {
+      "median": 0.001961685837995326,
+      "min": 0.0008402474975820537,
+      "max": 0.0033228105548292358
+    },
+    "fps": 119.99972421781291,
+    "frame_p95_ms": 8.5,
+    "timer_p95_ms": 25.100000001490116,
+    "work_median_ms": 4.699999999254942,
+    "work_p95_ms": 5.100000001490116,
+    "hidden_events": 0,
+    "blur_events": 0
+  },
+  "normal": {
+    "resource_rounds": 3,
+    "browser_rounds": 3,
+    "app_cpu_pct": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "app_private": {
+      "median": 2818048,
+      "min": 2801664,
+      "max": 2838528
+    },
+    "app_working": {
+      "median": 16793600,
+      "min": 16785408,
+      "max": 17059840
+    },
+    "dwm_cpu_pct": {
+      "median": 2.7564663150737285,
+      "min": 0.663228320414121,
+      "max": 4.85943016582009
+    },
+    "dwm_private": {
+      "median": 414280635.73333335,
+      "min": 412848128,
+      "max": 456798208
+    },
+    "dwm_gpu": {
+      "median": 0,
+      "min": 0,
+      "max": 0.0027929751360654276
+    },
+    "fps": 120.00013789156877,
+    "frame_p95_ms": 8.5,
+    "timer_p95_ms": 25,
+    "work_median_ms": 4.699999999254942,
+    "work_p95_ms": 5.099999997764826,
+    "hidden_events": 0,
+    "blur_events": 0
+  },
+  "gamma": {
+    "resource_rounds": 3,
+    "browser_rounds": 3,
+    "app_cpu_pct": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "app_private": {
+      "median": 2744320,
+      "min": 2715648,
+      "max": 2748416
+    },
+    "app_working": {
+      "median": 16785408,
+      "min": 16773120,
+      "max": 16785408
+    },
+    "dwm_cpu_pct": {
+      "median": 2.0415214902251746,
+      "min": 1.3282503831867036,
+      "max": 8.060442842555016
+    },
+    "dwm_private": {
+      "median": 418329941.3333333,
+      "min": 412853452.8,
+      "max": 456871936
+    },
+    "dwm_gpu": {
+      "median": 0.0022654128875528976,
+      "min": 0,
+      "max": 0.0024442371558432057
+    },
+    "fps": 120.00013789156901,
+    "frame_p95_ms": 8.5,
+    "timer_p95_ms": 25.099999997764826,
+    "work_median_ms": 4.699999999254942,
+    "work_p95_ms": 5.100000001490116,
+    "hidden_events": 0,
+    "blur_events": 0
+  },
+  "matrix": {
+    "resource_rounds": 3,
+    "browser_rounds": 3,
+    "app_cpu_pct": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "app_private": {
+      "median": 2781184,
+      "min": 2715648,
+      "max": 2912256
+    },
+    "app_working": {
+      "median": 16777216,
+      "min": 16764928,
+      "max": 16846848
+    },
+    "dwm_cpu_pct": {
+      "median": 13.165269326460665,
+      "min": 12.711451380777584,
+      "max": 13.168677683681246
+    },
+    "dwm_private": {
+      "median": 427011686.4,
+      "min": 422733141.3333333,
+      "max": 443407428.26666665
+    },
+    "dwm_gpu": {
+      "median": 4.040418174812197,
+      "min": 3.9885578970411824,
+      "max": 4.053068129997882
+    },
+    "fps": 120.0001378915689,
+    "frame_p95_ms": 8.5,
+    "timer_p95_ms": 25.099999997764826,
+    "work_median_ms": 4.699999999254942,
+    "work_p95_ms": 5.199999999254942,
+    "hidden_events": 0,
+    "blur_events": 0
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "mode": "black",
+    "round": 1,
+    "seconds": 32.8321524,
+    "app_cpu_one_core_pct": 0.0,
+    "app_working_bytes": 16261120,
+    "app_private_bytes": 2519040,
+    "dwm_cpu_one_core_pct": 13.178884400157317,
+    "dwm_private_working_bytes": 478208273.06666666,
+    "dwm_gpu_engine_sum_mean_pct": 30.09843689116206
+  },
+  {
+    "mode": "black",
+    "round": 2,
+    "seconds": 31.3677709,
+    "app_cpu_one_core_pct": 0.0,
+    "app_working_bytes": 16211968,
+    "app_private_bytes": 2424832,
+    "dwm_cpu_one_core_pct": 12.303720377545945,
+    "dwm_private_working_bytes": 478231483.73333335,
+    "dwm_gpu_engine_sum_mean_pct": 30.133237295183513
+  },
+  {
+    "mode": "black",
+    "round": 3,
+    "seconds": 31.2234367,
+    "app_cpu_one_core_pct": 0.0,
+    "app_working_bytes": 16211968,
+    "app_private_bytes": 2424832,
+    "dwm_cpu_one_core_pct": 12.717223935508562,
+    "dwm_private_working_bytes": 478270941.8666667,
+    "dwm_gpu_engine_sum_mean_pct": 30.144714063091083
+  }
+]

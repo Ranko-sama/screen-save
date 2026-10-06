@@ -1,0 +1,32 @@
+[
+  {
+    "metric": "fps",
+    "normal": 120.00013789156895,
+    "black": 120.00013789156901,
+    "delta_percent": 4.440892098500626E-14
+  },
+  {
+    "metric": "frame_p95_ms",
+    "normal": 8.5,
+    "black": 8.5,
+    "delta_percent": 0.0
+  },
+  {
+    "metric": "timer_p95_ms",
+    "normal": 25.09999999962747,
+    "black": 25.09999999962747,
+    "delta_percent": 0.0
+  },
+  {
+    "metric": "work_median_ms",
+    "normal": 4.800000000745058,
+    "black": 4.700000001117587,
+    "delta_percent": -2.083333325248937
+  },
+  {
+    "metric": "work_p95_ms",
+    "normal": 5.300000000745058,
+    "black": 5.299999998882413,
+    "delta_percent": -3.5144243071272285E-08
+  }
+]

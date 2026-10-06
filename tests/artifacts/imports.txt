@@ -1,0 +1,165 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file dist\ScreenSave.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following imports:
+
+    USER32.dll
+             14000E2B8 Import Address Table
+             140017688 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         2BD PostQuitMessage
+                         350 SetForegroundWindow
+                           C AppendMenuW
+                         269 LoadIconW
+                         3D2 TranslateMessage
+                         14A GetCursorPos
+                         193 GetMessageW
+                          AB DefWindowProcW
+                         3DF UnregisterHotKey
+                          B9 DestroyWindow
+                          7A CreateWindowExW
+                          75 CreatePopupMenu
+                         3CC TrackPopupMenu
+                          C1 DispatchMessageW
+                         2EF RegisterClassW
+                         2FB RegisterHotKey
+                         162 GetForegroundWindow
+                          B6 DestroyMenu
+
+    SHELL32.dll
+             14000E2A8 Import Address Table
+             140017678 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1BC Shell_NotifyIconW
+
+    MAGNIFICATION.dll
+             14000E258 Import Address Table
+             140017628 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           A MagSetFullscreenColorEffect
+                          14 MagUninitialize
+                           1 MagGetFullscreenColorEffect
+                           8 MagInitialize
+
+    ole32.dll
+             14000E350 Import Address Table
+             140017720 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          87 CoSetProxyBlanket
+                          61 CoInitializeEx
+                          2B CoCreateInstance
+                          91 CoUninitialize
+
+    OLEAUT32.dll
+             14000E280 Import Address Table
+             140017650 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                             Ordinal     6
+                             Ordinal     8
+                             Ordinal     2
+                             Ordinal     9
+
+    KERNEL32.dll
+             14000E000 Import Address Table
+             1400173D0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         5EA TlsAlloc
+                         65F WriteConsoleW
+                          9D CloseHandle
+                          E6 CreateFileW
+                         569 SetFilePointerEx
+                         225 GetConsoleMode
+                         229 GetConsoleOutputCP
+                         1C8 FlushFileBuffers
+                         383 HeapReAlloc
+                         385 HeapSize
+                         2E4 GetProcessHeap
+                         3E4 LCMapStringW
+                         61A VirtualProtect
+                         397 InitializeCriticalSectionEx
+                         1C3 FlsFree
+                         1C6 FlsSetValue
+                         1C4 FlsGetValue
+                         1C2 FlsAlloc
+                         308 GetStringTypeW
+                         27A GetFileType
+                         593 SetStdHandle
+                         1D3 FreeEnvironmentStringsW
+                         5A0 SetThreadExecutionState
+                         509 RtlCaptureContext
+                         511 RtlLookupFunctionEntry
+                         518 RtlVirtualUnwind
+                         5FB UnhandledExceptionFilter
+                         5B8 SetUnhandledExceptionFilter
+                         241 GetCurrentProcess
+                         5D8 TerminateProcess
+                         3B8 IsProcessorFeaturePresent
+                         481 QueryPerformanceCounter
+                         242 GetCurrentProcessId
+                         246 GetCurrentThreadId
+                         31A GetSystemTimeAsFileTime
+                         39A InitializeSListHead
+                         3B0 IsDebuggerPresent
+                         301 GetStartupInfoW
+                         2A5 GetModuleHandleW
+                         262 GetEnvironmentStringsW
+                         517 RtlUnwindEx
+                         28D GetLastError
+                         578 SetLastError
+                         153 EncodePointer
+                         498 RaiseException
+                         157 EnterCriticalSection
+                         3F0 LeaveCriticalSection
+                         12F DeleteCriticalSection
+                         396 InitializeCriticalSectionAndSpinCount
+                         5EC TlsGetValue
+                         5EE TlsSetValue
+                         5EB TlsFree
+                         1D4 FreeLibrary
+                         2DD GetProcAddress
+                         3F6 LoadLibraryExW
+                         513 RtlPcToFileHeader
+                         303 GetStdHandle
+                         660 WriteFile
+                         2A1 GetModuleFileNameW
+                         186 ExitProcess
+                         2A4 GetModuleHandleExW
+                         37C HeapAlloc
+                         380 HeapFree
+                         19D FindClose
+                         1A3 FindFirstFileExW
+                         1B4 FindNextFileW
+                         3BE IsValidCodePage
+                         1DB GetACP
+                         2C6 GetOEMCP
+                         1EA GetCPInfo
+                         1FF GetCommandLineA
+                         200 GetCommandLineW
+                         423 MultiByteToWideChar
+                         64C WideCharToMultiByte
+
+  Summary
+
+        3000 .data
+        1000 .fptable
+        1000 .pdata
+        A000 .rdata
+        1000 .reloc
+        D000 .text

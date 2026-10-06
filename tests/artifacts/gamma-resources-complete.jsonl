@@ -1,0 +1,12 @@
+{"mode":"off","round":1,"seconds":31.8284707,"app_cpu_pct":0,"app_private":0,"app_working":0,"dwm_cpu_pct":1.224532008827176,"dwm_private":456798208.0,"dwm_gpu":0.0033228105548292358}
+{"mode":"normal","round":1,"seconds":31.7739992,"app_cpu_pct":0.0,"app_private":2801664,"app_working":16785408,"dwm_cpu_pct":0.663228320414121,"dwm_private":456798208.0,"dwm_gpu":0.0}
+{"mode":"gamma","round":1,"seconds":31.7662063,"app_cpu_pct":0.0,"app_private":2744320,"app_working":16785408,"dwm_cpu_pct":1.3282503831867036,"dwm_private":456871936.0,"dwm_gpu":0.0}
+{"mode":"matrix","round":1,"seconds":31.8082162,"app_cpu_pct":0.0,"app_private":2715648,"app_working":16777216,"dwm_cpu_pct":13.168677683681246,"dwm_private":443407428.26666665,"dwm_gpu":4.053068129997882}
+{"mode":"gamma","round":2,"seconds":31.7716012,"app_cpu_pct":0.0,"app_private":2715648,"app_working":16785408,"dwm_cpu_pct":2.0415214902251746,"dwm_private":412853452.8,"dwm_gpu":0.0024442371558432057}
+{"mode":"normal","round":2,"seconds":31.8389774,"app_cpu_pct":0.0,"app_private":2818048,"app_working":17059840,"dwm_cpu_pct":2.7564663150737285,"dwm_private":412848128.0,"dwm_gpu":0.0}
+{"mode":"off","round":2,"seconds":31.7864457,"app_cpu_pct":0,"app_private":0,"app_working":0,"dwm_cpu_pct":2.5002433444348453,"dwm_private":412852770.1333333,"dwm_gpu":0.001961685837995326}
+{"mode":"matrix","round":2,"seconds":31.7502408,"app_cpu_pct":0.0,"app_private":2912256,"app_working":16846848,"dwm_cpu_pct":13.165269326460665,"dwm_private":422733141.3333333,"dwm_gpu":3.9885578970411824}
+{"mode":"off","round":3,"seconds":31.824795,"app_cpu_pct":0,"app_private":0,"app_working":0,"dwm_cpu_pct":4.542309981140836,"dwm_private":414282683.73333335,"dwm_gpu":0.0008402474975820537}
+{"mode":"normal","round":3,"seconds":31.7159892,"app_cpu_pct":0.0,"app_private":2838528,"app_working":16793600,"dwm_cpu_pct":4.85943016582009,"dwm_private":414280635.73333335,"dwm_gpu":0.0027929751360654276}
+{"mode":"matrix","round":3,"seconds":31.7301922,"app_cpu_pct":0.0,"app_private":2781184,"app_working":16764928,"dwm_cpu_pct":12.711451380777584,"dwm_private":427011686.4,"dwm_gpu":4.040418174812197}
+{"mode":"gamma","round":3,"seconds":31.8358464,"app_cpu_pct":0.0,"app_private":2748416,"app_working":16773120,"dwm_cpu_pct":8.060442842555016,"dwm_private":418329941.3333333,"dwm_gpu":0.0022654128875528976}

@@ -1,0 +1,2 @@
+display_state=1 elapsed_ms=16
+elapsed_ms=930016 display_state=1 non_on_events=0 suspend_events=0 input_idle_ms=578672

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>Screen Save — local benchmark</title>
+<style>
+body{font:18px system-ui;margin:32px;background:#f5f5f5;color:#17212c}button,input{font:inherit;padding:8px;margin:4px}pre{font:14px monospace;white-space:pre-wrap}.swatches{display:flex;height:100px;margin:20px 0}.swatches div{flex:1}canvas{background:#17212c}#status{font-weight:bold}
+</style>
+<h1>Screen Save 本地测试</h1>
+<p>仅连接本机测试服务并保存测量结果。屏幕变暗时，截图中的色块仍应保持原色。</p>
+<div class="swatches"><div style="background:#fff"></div><div style="background:#f00"></div><div style="background:#0f0"></div><div style="background:#00f"></div><div style="background:#888"></div><div style="background:#000"></div></div>
+<label>操作验证 <input id="entry" placeholder="在压暗时输入文字"></label>
+<button id="clickTest" onclick="this.textContent='点击成功'">点击验证</button>
+<p><select id="mode"><option>正常</option><option>全黑</option><option>未运行</option><option>Gamma</option><option>颜色矩阵</option></select><button id="short" onclick="start(30)">测量 30 秒</button><button id="triple" onclick="remaining=3;start(30)">连续测量三轮</button><button id="long" onclick="start(900)">测量 15 分钟</button><button onclick="results.textContent=''">清空结果</button></p>
+<p id="status">准备就绪</p>
+<canvas width="800" height="100"></canvas>
+<pre id="results"></pre>
+<script>
+const statusEl=document.querySelector('#status'), results=document.querySelector('#results');
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+let active=null, last=performance.now(), timerLast=last, accumulator=0, remaining=0;
+const percentile=(a,p)=>a.slice().sort((x,y)=>x-y)[Math.min(a.length-1,Math.floor(a.length*p))]||0;
+function start(seconds){active={begin:performance.now(),end:performance.now()+seconds*1000,frames:[],timer:[],work:[],hidden:0,blur:0,seconds};statusEl.textContent='测量中：'+seconds+' 秒';}
+document.addEventListener('visibilitychange',()=>{if(active&&document.hidden)active.hidden++});
+window.addEventListener('blur',()=>{if(active)active.blur++});
+setInterval(()=>{const now=performance.now();if(active)active.timer.push(now-timerLast);timerLast=now},20);
+function frame(now){
+ const dt=now-last;last=now;
+ const begin=performance.now();let v=accumulator;
+ for(let i=0;i<200000;i++)v=Math.sin(v+i*.0001)+Math.cos(i*.0003);
+ accumulator=v;const work=performance.now()-begin;
+ ctx.clearRect(0,0,800,100);ctx.fillStyle='#61dafb';ctx.fillRect((now*.08)%760,20,40,60);
+ if(active){
+  if(now-active.begin>1000){active.frames.push(dt);active.work.push(work)}
+  if(now>=active.end){const a=active;active=null;const total=a.frames.reduce((x,y)=>x+y,0);const row={mode:document.querySelector('#mode').value,seconds:a.seconds,fps:1000*a.frames.length/total,frame_p95_ms:percentile(a.frames,.95),timer_p95_ms:percentile(a.timer,.95),work_median_ms:percentile(a.work,.5),work_p95_ms:percentile(a.work,.95),max_frame_ms:a.frames.reduce((x,y)=>Math.max(x,y),0),hidden_events:a.hidden,blur_events:a.blur,visibility:document.visibilityState,has_focus:document.hasFocus()};results.textContent+=JSON.stringify(row)+'\n';fetch('/result',{method:'POST',body:JSON.stringify(row)});statusEl.textContent='完成';if(remaining>0&&--remaining>0)start(30);}
+ }
+ requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</html>

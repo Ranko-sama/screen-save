@@ -1,0 +1,10 @@
+{
+  "mode": "black",
+  "seconds": 31.9200237,
+  "app_cpu_one_core_pct": 0.0,
+  "app_working_bytes": 15912960,
+  "app_private_bytes": 2363392,
+  "dwm_cpu_one_core_pct": 18.171968740402665,
+  "dwm_private_working_bytes": 478037196.8,
+  "dwm_gpu_engine_sum_mean_pct": 30.192333737536895
+}

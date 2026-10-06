@@ -1,0 +1,9 @@
+{
+  "cpu_delta": 0.0,
+  "seconds": 976.6528835,
+  "working": 17334272,
+  "pid": 28668,
+  "private": 3006464,
+  "cpu_pct": 0.0,
+  "state": "matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3"
+}

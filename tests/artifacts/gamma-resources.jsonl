@@ -1,0 +1,8 @@
+{"mode":"off","round":1,"seconds":31.1501425,"app_cpu_pct":0,"app_private":0,"app_working":0,"dwm_cpu_pct":15.931727439808792,"dwm_private":479968870.4,"dwm_gpu":29.1445030902403}
+{"mode":"normal","round":1,"seconds":31.1233917,"app_cpu_pct":0.0,"app_private":3076096,"app_working":16994304,"dwm_cpu_pct":16.31109536752429,"dwm_private":480005461.3333333,"dwm_gpu":28.74889680041741}
+{"mode":"gamma","round":1,"seconds":31.1529909,"app_cpu_pct":0.0,"app_private":2949120,"app_working":16936960,"dwm_cpu_pct":17.05482076755831,"dwm_private":480004778.6666667,"dwm_gpu":29.034899509867827}
+{"mode":"matrix","round":1,"seconds":31.1149441,"app_cpu_pct":0.0,"app_private":2916352,"app_working":16924672,"dwm_cpu_pct":15.586918516136429,"dwm_private":507858944.0,"dwm_gpu":34.501940943603195}
+{"mode":"normal","round":2,"seconds":31.1305671,"app_cpu_pct":0.0,"app_private":2887680,"app_working":16908288,"dwm_cpu_pct":17.84087764077452,"dwm_private":479996586.6666667,"dwm_gpu":29.00520074509688}
+{"mode":"gamma","round":2,"seconds":31.1339361,"app_cpu_pct":0.0,"app_private":2977792,"app_working":17170432,"dwm_cpu_pct":17.49002657974984,"dwm_private":479982114.1333333,"dwm_gpu":29.300722887279516}
+{"mode":"off","round":2,"seconds":31.1207626,"app_cpu_pct":0,"app_private":0,"app_working":0,"dwm_cpu_pct":15.84338624236979,"dwm_private":479956582.4,"dwm_gpu":29.12673600549056}
+{"mode":"matrix","round":2,"seconds":31.0855855,"app_cpu_pct":0.0,"app_private":2830336,"app_working":16805888,"dwm_cpu_pct":17.659017130254878,"dwm_private":508067840.0,"dwm_gpu":35.91410794128341}
