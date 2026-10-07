@@ -1,0 +1,19 @@
+START 2026-10-07T00:40:41.5506868+08:00 seconds=180
+READY HID_EVENT20
+READY HID_EVENT21
+READY HID_EVENT22
+READY HID_EVENT23
+READY WmiMonitorBrightnessEvent
+2026-10-07T00:41:10.0018277+08:00 WmiMonitorBrightnessEvent brightness=10
+2026-10-07T00:41:10.2101526+08:00 WmiMonitorBrightnessEvent brightness=20
+2026-10-07T00:41:11.6483725+08:00 WmiMonitorBrightnessEvent brightness=30
+2026-10-07T00:41:21.1186786+08:00 WmiMonitorBrightnessEvent brightness=20
+2026-10-07T00:41:21.7381352+08:00 WmiMonitorBrightnessEvent brightness=10
+2026-10-07T00:41:22.3531666+08:00 WmiMonitorBrightnessEvent brightness=0
+2026-10-07T00:41:29.5652849+08:00 WmiMonitorBrightnessEvent brightness=10
+2026-10-07T00:42:51.2431306+08:00 HID_EVENT20 EventDetail=1,9,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2026-10-07T00:42:51.6540383+08:00 HID_EVENT20 EventDetail=1,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2026-10-07T00:43:44.6583494+08:00 WmiMonitorBrightnessEvent brightness=20
+2026-10-07T00:43:45.0829556+08:00 WmiMonitorBrightnessEvent brightness=30
+2026-10-07T00:43:45.4928030+08:00 WmiMonitorBrightnessEvent brightness=40
+STOPPED 2026-10-07T00:43:46.5327561+08:00

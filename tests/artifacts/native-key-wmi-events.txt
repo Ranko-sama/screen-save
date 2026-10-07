@@ -1,0 +1,6 @@
+READY: observing WmiMonitorBrightnessEvent for 180 seconds; no brightness is changed by this observer.
+elapsed_ms=34262 brightness=20
+elapsed_ms=34661 brightness=10
+elapsed_ms=35164 brightness=0
+elapsed_ms=40399 brightness=10
+STOPPED

@@ -1,0 +1,2 @@
+exports query=1 subscribe=1 unsubscribe=1
+query_status=0xc0000022 stamp=0

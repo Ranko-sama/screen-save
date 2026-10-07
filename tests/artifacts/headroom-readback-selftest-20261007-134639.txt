@@ -1,0 +1,12 @@
+    47 ms SAVED_BRIGHTNESS=100
+    47 ms SELFTEST=1
+    62 ms POWER_SUBSCRIPTION=1
+    62 ms EXIT_HOTKEY_CTRL_ALT_SHIFT_Q=1
+    62 ms EVENT=100
+    62 ms dispatch_delay_ms=0
+   891 ms WRITE value=1 hresult=0x00000000 return=0 duration_ms=16
+   891 ms READY_ANCHOR=1
+   891 ms WRITE value=100 hresult=0x00000000 return=0 duration_ms=0
+RESTORED hardware=1 expected=100 gamma_set=1 gamma_exact=1
+TOTAL down=0 up=0 dim=0
+INVALID INSTRUMENTATION: this version incorrectly required a non-null WmiSetBrightness output object and checked asynchronous restoration without settling time. The helper was fixed; a separate query confirmed brightness 100. Superseded by headroom-readback-selftest-20261007-134816.txt.

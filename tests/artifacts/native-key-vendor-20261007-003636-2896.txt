@@ -1,0 +1,17 @@
+START 2026-10-07T00:36:36.3710581+08:00 seconds=180
+READY HID_EVENT20
+READY HID_EVENT21
+READY HID_EVENT22
+READY HID_EVENT23
+READY WmiMonitorBrightnessEvent
+2026-10-07T00:37:33.7641487+08:00 WmiMonitorBrightnessEvent brightness=10
+2026-10-07T00:37:34.3900035+08:00 WmiMonitorBrightnessEvent brightness=20
+2026-10-07T00:37:34.3920964+08:00 WmiMonitorBrightnessEvent brightness=30
+2026-10-07T00:37:34.5945394+08:00 WmiMonitorBrightnessEvent brightness=40
+2026-10-07T00:37:34.8015606+08:00 WmiMonitorBrightnessEvent brightness=50
+2026-10-07T00:37:35.0078070+08:00 WmiMonitorBrightnessEvent brightness=60
+2026-10-07T00:37:35.2118212+08:00 WmiMonitorBrightnessEvent brightness=70
+2026-10-07T00:37:35.4185698+08:00 WmiMonitorBrightnessEvent brightness=80
+2026-10-07T00:37:35.6248554+08:00 WmiMonitorBrightnessEvent brightness=90
+2026-10-07T00:37:35.8455721+08:00 WmiMonitorBrightnessEvent brightness=100
+RESTARTED for user-ready test; temporary subscriptions ended with host process.

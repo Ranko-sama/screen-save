@@ -23,7 +23,8 @@ int main(int argc, char** argv) {
         printf("exit_code=%lu\n", code);
         CloseHandle(process);
     } else if (command == 3 || command == 4) {
-        SendMessageW(app, WM_COMMAND, command, 0);
+        PostMessageW(app, WM_COMMAND, command, 0);
+        Sleep(500);
     } else if (command >= 1 && command <= 2 || command == 5) {
         // Real WM_HOTKEY events are queued; synchronous cross-process messages
         // forbid the handler's outgoing COM calls.

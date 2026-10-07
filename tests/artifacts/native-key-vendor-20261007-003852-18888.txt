@@ -1,0 +1,17 @@
+START 2026-10-07T00:38:52.3314006+08:00 seconds=180
+READY HID_EVENT20
+READY HID_EVENT21
+READY HID_EVENT22
+READY HID_EVENT23
+READY WmiMonitorBrightnessEvent
+2026-10-07T00:39:26.7408203+08:00 WmiMonitorBrightnessEvent brightness=90
+2026-10-07T00:39:27.1534074+08:00 WmiMonitorBrightnessEvent brightness=80
+2026-10-07T00:39:27.3602603+08:00 WmiMonitorBrightnessEvent brightness=70
+2026-10-07T00:39:27.7819167+08:00 WmiMonitorBrightnessEvent brightness=60
+2026-10-07T00:39:28.1936135+08:00 WmiMonitorBrightnessEvent brightness=50
+2026-10-07T00:39:28.3995144+08:00 WmiMonitorBrightnessEvent brightness=40
+2026-10-07T00:39:28.8220924+08:00 WmiMonitorBrightnessEvent brightness=30
+2026-10-07T00:39:29.2348064+08:00 WmiMonitorBrightnessEvent brightness=20
+2026-10-07T00:39:29.6482482+08:00 WmiMonitorBrightnessEvent brightness=10
+2026-10-07T00:39:30.2655403+08:00 WmiMonitorBrightnessEvent brightness=0
+INVALID SEQUENCE: user requested repeat; temporary subscription host stopped.

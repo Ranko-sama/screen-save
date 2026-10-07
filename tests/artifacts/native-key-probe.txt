@@ -1,0 +1,53 @@
+      31 ms  RawInput registration=1 error=0
+      31 ms  Keyboard hook=ready
+      31 ms  Brightness notification=ready
+      31 ms  READY - follow the instructions above; no keys are blocked.
+      31 ms  BRIGHTNESS value=100
+    2703 ms  BRIGHTNESS value=90
+    2968 ms  BRIGHTNESS value=80
+    3281 ms  BRIGHTNESS value=70
+    4547 ms  BRIGHTNESS value=80
+    4781 ms  BRIGHTNESS value=90
+    5031 ms  BRIGHTNESS value=100
+   34718 ms  BRIGHTNESS value=90
+   34984 ms  BRIGHTNESS value=80
+   35265 ms  BRIGHTNESS value=70
+   35515 ms  BRIGHTNESS value=60
+   35812 ms  BRIGHTNESS value=50
+   36140 ms  BRIGHTNESS value=40
+   36453 ms  BRIGHTNESS value=30
+   36765 ms  BRIGHTNESS value=20
+   37140 ms  BRIGHTNESS value=10
+   37562 ms  BRIGHTNESS value=0
+   39062 ms  BRIGHTNESS value=10
+   39359 ms  BRIGHTNESS value=20
+   39656 ms  BRIGHTNESS value=30
+   39859 ms  BRIGHTNESS value=40
+   40062 ms  BRIGHTNESS value=50
+   40265 ms  BRIGHTNESS value=60
+   40484 ms  BRIGHTNESS value=70
+   41562 ms  BRIGHTNESS value=80
+   41765 ms  BRIGHTNESS value=90
+   41984 ms  BRIGHTNESS value=100
+   70625 ms  BRIGHTNESS value=90
+   71140 ms  BRIGHTNESS value=80
+   71343 ms  BRIGHTNESS value=70
+   71562 ms  BRIGHTNESS value=60
+   71765 ms  BRIGHTNESS value=50
+   71968 ms  BRIGHTNESS value=40
+   72187 ms  BRIGHTNESS value=30
+   72390 ms  BRIGHTNESS value=20
+   72609 ms  BRIGHTNESS value=10
+   72828 ms  BRIGHTNESS value=0
+   75312 ms  BRIGHTNESS value=10
+   75812 ms  BRIGHTNESS value=20
+   76015 ms  BRIGHTNESS value=30
+   76234 ms  BRIGHTNESS value=40
+   76468 ms  BRIGHTNESS value=50
+   76687 ms  BRIGHTNESS value=60
+   76890 ms  BRIGHTNESS value=70
+   77109 ms  BRIGHTNESS value=80
+   77312 ms  BRIGHTNESS value=90
+   77531 ms  BRIGHTNESS value=100
+  300031 ms  TIME LIMIT: five minutes
+  300047 ms  STOPPED

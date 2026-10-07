@@ -1,0 +1,116 @@
+    31 ms SAVED_BRIGHTNESS=100
+    31 ms SELFTEST=0
+    31 ms POWER_SUBSCRIPTION=1
+    31 ms EXIT_HOTKEY_CTRL_ALT_SHIFT_Q=1
+    31 ms EVENT=100
+    31 ms dispatch_delay_ms=0
+   859 ms WRITE value=1 hresult=0x00000000 duration_ms=15
+   859 ms READBACK actual=1 expected=1 total_write_read_ms=15
+   859 ms READY_ANCHOR=1
+   875 ms EVENT=1
+   875 ms dispatch_delay_ms=0
+   875 ms ANCHOR_ACK_MS=31
+ 22953 ms EVENT=0
+ 22953 ms dispatch_delay_ms=0
+ 22953 ms STEP direction=DOWN down=1 up=0 dim=1
+ 22969 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 22969 ms READBACK actual=1 expected=1 total_write_read_ms=16
+ 22969 ms GAMMA_OK=1
+ 23141 ms EVENT=1
+ 23141 ms dispatch_delay_ms=0
+ 23141 ms ANCHOR_ACK_MS=188
+ 25484 ms EVENT=0
+ 25484 ms dispatch_delay_ms=0
+ 25484 ms STEP direction=DOWN down=2 up=0 dim=2
+ 25500 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 25500 ms READBACK actual=0 expected=1 total_write_read_ms=16
+ 25500 ms GAMMA_OK=1
+ 25687 ms EVENT=1
+ 25687 ms dispatch_delay_ms=0
+ 25687 ms ANCHOR_ACK_MS=203
+ 27891 ms EVENT=0
+ 27891 ms dispatch_delay_ms=0
+ 27891 ms STEP direction=DOWN down=3 up=0 dim=3
+ 27906 ms WRITE value=1 hresult=0x00000000 duration_ms=15
+ 27906 ms READBACK actual=0 expected=1 total_write_read_ms=15
+ 27906 ms GAMMA_OK=1
+ 28109 ms EVENT=1
+ 28109 ms dispatch_delay_ms=0
+ 28109 ms ANCHOR_ACK_MS=218
+ 30187 ms EVENT=0
+ 30187 ms dispatch_delay_ms=0
+ 30187 ms STEP direction=DOWN down=4 up=0 dim=4
+ 30203 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 30203 ms READBACK actual=1 expected=1 total_write_read_ms=16
+ 30203 ms GAMMA_OK=1
+ 30375 ms EVENT=1
+ 30375 ms dispatch_delay_ms=0
+ 30375 ms ANCHOR_ACK_MS=188
+ 32594 ms EVENT=0
+ 32594 ms dispatch_delay_ms=0
+ 32594 ms STEP direction=DOWN down=5 up=0 dim=5
+ 32609 ms WRITE value=1 hresult=0x00000000 duration_ms=15
+ 32609 ms READBACK actual=0 expected=1 total_write_read_ms=15
+ 32609 ms GAMMA_OK=1
+ 32812 ms EVENT=1
+ 32812 ms dispatch_delay_ms=15
+ 32812 ms ANCHOR_ACK_MS=218
+ 35250 ms EVENT=11
+ 35250 ms dispatch_delay_ms=0
+ 35250 ms STEP direction=UP down=5 up=1 dim=4
+ 35266 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 35266 ms READBACK actual=11 expected=1 total_write_read_ms=16
+ 35266 ms GAMMA_OK=1
+ 35469 ms EVENT=1
+ 35469 ms dispatch_delay_ms=0
+ 35469 ms ANCHOR_ACK_MS=219
+ 37125 ms EVENT=11
+ 37125 ms dispatch_delay_ms=0
+ 37125 ms STEP direction=UP down=5 up=2 dim=3
+ 37141 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 37141 ms READBACK actual=1 expected=1 total_write_read_ms=16
+ 37141 ms GAMMA_OK=1
+ 37328 ms EVENT=1
+ 37328 ms dispatch_delay_ms=0
+ 37328 ms ANCHOR_ACK_MS=203
+ 38969 ms EVENT=11
+ 38969 ms dispatch_delay_ms=0
+ 38969 ms STEP direction=UP down=5 up=3 dim=2
+ 38969 ms WRITE value=1 hresult=0x00000000 duration_ms=0
+ 38984 ms READBACK actual=11 expected=1 total_write_read_ms=15
+ 38984 ms GAMMA_OK=1
+ 39172 ms EVENT=1
+ 39172 ms dispatch_delay_ms=0
+ 39172 ms ANCHOR_ACK_MS=203
+ 40766 ms EVENT=11
+ 40766 ms dispatch_delay_ms=0
+ 40766 ms STEP direction=UP down=5 up=4 dim=1
+ 40766 ms WRITE value=1 hresult=0x00000000 duration_ms=0
+ 40766 ms READBACK actual=11 expected=1 total_write_read_ms=0
+ 40766 ms GAMMA_OK=1
+ 40953 ms EVENT=1
+ 40953 ms dispatch_delay_ms=0
+ 40953 ms ANCHOR_ACK_MS=187
+ 42594 ms EVENT=11
+ 42594 ms dispatch_delay_ms=0
+ 42594 ms STEP direction=UP down=5 up=5 dim=0
+ 42594 ms WRITE value=1 hresult=0x00000000 duration_ms=0
+ 42609 ms READBACK actual=11 expected=1 total_write_read_ms=15
+ 42609 ms GAMMA_OK=1
+ 42781 ms EVENT=1
+ 42781 ms dispatch_delay_ms=0
+ 42781 ms ANCHOR_ACK_MS=187
+ 44531 ms EVENT=11
+ 44531 ms dispatch_delay_ms=0
+ 44531 ms STEP direction=UP down=5 up=6 dim=0
+ 44547 ms WRITE value=1 hresult=0x00000000 duration_ms=16
+ 44547 ms READBACK actual=11 expected=1 total_write_read_ms=16
+ 44547 ms GAMMA_OK=1
+ 44750 ms EVENT=1
+ 44750 ms dispatch_delay_ms=0
+ 44750 ms ANCHOR_ACK_MS=219
+ 48672 ms STOP_REQUEST=786
+ 48672 ms WRITE value=100 hresult=0x00000000 duration_ms=0
+ 48687 ms READBACK actual=100 expected=100 total_write_read_ms=15
+RESTORED hardware=100 expected=100 gamma_set=1 gamma_exact=1
+TOTAL down=5 up=6 dim=0

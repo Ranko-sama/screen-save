@@ -4,7 +4,6 @@
 #include <wbemidl.h>
 
 constexpr UINT TrayMessage = WM_APP + 1;
-constexpr int DimSteps = 20;
 IWbemServices* wmi;
 IWbemClassObject* brightnessArguments;
 BSTR brightnessMethodPath;
@@ -14,8 +13,8 @@ WORD originalGamma[3][256];
 enum class DimmingMode { Matrix, Gamma };
 DimmingMode dimmingMode = DimmingMode::Matrix;
 NOTIFYICONDATAW tray{};
-int dimLevel = 0;
-int previousDimLevel = 0;
+bool isDark = false;
+int brightnessBeforeDark;
 
 IWbemClassObject* Query(const wchar_t* text) {
     BSTR language = SysAllocString(L"WQL");
@@ -89,18 +88,18 @@ void SetBrightness(int brightness) {
     SysFreeString(method);
 }
 
-void ApplyOutput(int level) {
+void ApplyOutput(bool dark) {
     if (dimmingMode == DimmingMode::Gamma) {
         WORD ramp[3][256];
-        // This laptop accepts linear Gamma gains from 1.0 through 0.5.
+        // 0.5 is this laptop's lowest accepted linear Gamma gain.
         for (int channel = 0; channel < 3; ++channel)
             for (int entry = 0; entry < 256; ++entry)
                 ramp[channel][entry] = static_cast<WORD>(
-                    originalGamma[channel][entry] * (2 * DimSteps - level) / (2 * DimSteps));
+                    originalGamma[channel][entry] / (dark ? 2 : 1));
         SetDeviceGammaRamp(display, ramp);
     } else {
         auto colors = originalColors;
-        const float gain = 1.0f - static_cast<float>(level) / DimSteps;
+        const float gain = dark ? 0.0f : 1.0f;
         for (int row = 0; row < 5; ++row)
             for (int column = 0; column < 3; ++column)
                 colors.transform[row][column] *= gain;
@@ -109,54 +108,36 @@ void ApplyOutput(int level) {
 }
 
 void ApplyDimming() {
-    ApplyOutput(dimLevel);
+    ApplyOutput(isDark);
     SetThreadExecutionState(ES_CONTINUOUS |
-        (dimLevel ? ES_SYSTEM_REQUIRED | ES_DISPLAY_REQUIRED : 0));
-}
-
-void SelectMode(DimmingMode mode) {
-    ApplyOutput(0);
-    dimmingMode = mode;
-    ApplyDimming();
-}
-
-void AdjustBrightness(bool increase) {
-    previousDimLevel = 0;
-    if (dimLevel > 0) {
-        dimLevel = increase ? dimLevel - 1 : min(DimSteps, dimLevel + 1);
-        ApplyDimming();
-        return;
-    }
-    const int brightness = ReadBrightness();
-    if (!increase && brightness == 0) {
-        dimLevel = 1;
-        ApplyDimming();
-    } else {
-        SetBrightness(increase ? min(100, brightness + 5) : max(0, brightness - 5));
-    }
+        (isDark ? ES_SYSTEM_REQUIRED | ES_DISPLAY_REQUIRED : 0));
 }
 
 void ToggleBlack() {
-    if (dimLevel == DimSteps) {
-        dimLevel = previousDimLevel;
-        previousDimLevel = 0;
-    } else {
-        previousDimLevel = dimLevel;
-        dimLevel = DimSteps;
-    }
+    // Keep one restore value for this session, including mode switches.
+    if (!isDark) brightnessBeforeDark = ReadBrightness();
+    isDark = !isDark;
+    if (dimmingMode == DimmingMode::Gamma)
+        SetBrightness(isDark ? 0 : brightnessBeforeDark);
+    ApplyDimming();
+}
+
+void SelectMode(DimmingMode mode) {
+    if (mode == dimmingMode) return;
+    ApplyOutput(false);
+    if (isDark) SetBrightness(mode == DimmingMode::Gamma ? 0 : brightnessBeforeDark);
+    dimmingMode = mode;
     ApplyDimming();
 }
 
 LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) {
     if (message == WM_HOTKEY) {
-        if (w == 1) AdjustBrightness(false);
-        if (w == 2) AdjustBrightness(true);
         if (w == 3) ToggleBlack();
         return 0;
     }
     if (message == TrayMessage && (l == WM_RBUTTONUP || l == WM_LBUTTONUP)) {
         HMENU menu = CreatePopupMenu();
-        AppendMenuW(menu, MF_STRING, 1, dimLevel == DimSteps ? L"恢复" :
+        AppendMenuW(menu, MF_STRING, 1, isDark ? L"恢复" :
             dimmingMode == DimmingMode::Matrix ? L"黑屏" : L"最暗");
         HMENU modes = CreatePopupMenu();
         AppendMenuW(modes, MF_STRING, 3, L"颜色矩阵（可全黑）");
@@ -203,8 +184,6 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     // Invisible message receiver only; no covering or rendering window.
     HWND window = CreateWindowW(cls.lpszClassName, L"Screen Save", 0,
         0, 0, 0, 0, nullptr, nullptr, instance, nullptr);
-    RegisterHotKey(window, 1, MOD_CONTROL | MOD_ALT, VK_NEXT);
-    RegisterHotKey(window, 2, MOD_CONTROL | MOD_ALT, VK_PRIOR);
     RegisterHotKey(window, 3, MOD_CONTROL | MOD_ALT | MOD_NOREPEAT, 'B');
     tray.cbSize = sizeof(tray);
     tray.hWnd = window;
@@ -219,10 +198,9 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
         TranslateMessage(&message);
         DispatchMessageW(&message);
     }
-    dimLevel = 0;
-    ApplyDimming();
+    if (isDark) ToggleBlack();
     Shell_NotifyIconW(NIM_DELETE, &tray);
-    for (int id = 1; id <= 3; ++id) UnregisterHotKey(window, id);
+    UnregisterHotKey(window, 3);
     MagUninitialize();
     ReleaseDC(nullptr, display);
     brightnessArguments->Release();

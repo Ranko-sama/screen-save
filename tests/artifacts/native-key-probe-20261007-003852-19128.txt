@@ -1,0 +1,36 @@
+       0 ms  RawInput registration=1 error=0
+       0 ms  Keyboard hook=ready error=0
+       0 ms  Brightness notification=ready
+       0 ms  READY - follow the instructions above; no keys are blocked.
+       0 ms  BRIGHTNESS value=100
+   25390 ms  HOOK vk=0074 down scan=003f injected=0
+   25390 ms  RAW vk=0074 down scan=003f device=000000000001003F
+   25515 ms  HOOK vk=0074 up scan=003f injected=0
+   25515 ms  RAW vk=0074 up scan=003f device=000000000001003F
+   25718 ms  HOOK vk=0074 down scan=003f injected=0
+   25718 ms  RAW vk=0074 down scan=003f device=000000000001003F
+   25812 ms  HOOK vk=0074 up scan=003f injected=0
+   25812 ms  RAW vk=0074 up scan=003f device=000000000001003F
+   26046 ms  HOOK vk=0074 down scan=003f injected=0
+   26046 ms  RAW vk=0074 down scan=003f device=000000000001003F
+   26187 ms  HOOK vk=0074 up scan=003f injected=0
+   26187 ms  RAW vk=0074 up scan=003f device=000000000001003F
+   30828 ms  HOOK vk=0074 down scan=003f injected=0
+   30843 ms  RAW vk=0074 down scan=003f device=000000000001003F
+   31000 ms  HOOK vk=0074 up scan=003f injected=0
+   31000 ms  RAW vk=0074 up scan=003f device=000000000001003F
+   32156 ms  HOOK vk=0075 down scan=0040 injected=0
+   32156 ms  RAW vk=0075 down scan=0040 device=000000000001003F
+   32296 ms  HOOK vk=0075 up scan=0040 injected=0
+   32296 ms  RAW vk=0075 up scan=0040 device=000000000001003F
+   34375 ms  BRIGHTNESS value=90
+   34687 ms  BRIGHTNESS value=80
+   35031 ms  BRIGHTNESS value=70
+   35343 ms  BRIGHTNESS value=60
+   35718 ms  BRIGHTNESS value=50
+   36062 ms  BRIGHTNESS value=40
+   36484 ms  BRIGHTNESS value=30
+   36859 ms  BRIGHTNESS value=20
+   37281 ms  BRIGHTNESS value=10
+   37765 ms  BRIGHTNESS value=0
+INVALID SEQUENCE: user requested repeat; helper stopped.
