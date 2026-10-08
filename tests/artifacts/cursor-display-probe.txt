@@ -1,0 +1,9 @@
+baseline hardware_pointer_visible=-1 updates=0 position=1465,1934
+black_hidden hardware_pointer_visible=-1 updates=0 position=1465,1934
+ordinary_restore hardware_pointer_visible=-1 updates=0 position=1465,1934
+same_position_result=1
+same_position hardware_pointer_visible=1 updates=1 position=1465,1934
+dwm_flush_result=00000000
+dwm_flush hardware_pointer_visible=1 updates=0 position=1465,1934
+uninitialize_result=1
+uninitialize hardware_pointer_visible=1 updates=0 position=1465,1934

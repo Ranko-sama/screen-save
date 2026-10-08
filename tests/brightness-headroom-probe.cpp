@@ -1,6 +1,7 @@
 // Developer-only experiment; not included in the released EXE.
 // Reuse the app's WMI connection and Gamma scaling. No keyboard interception.
-#include "../screen-save.cpp"
+// Historical COM/WMI experiment, pinned to the implementation it measured.
+#include "artifacts/memory-optimization/baseline.cpp"
 #include <initguid.h>
 #include <powrprof.h>
 #include <cstdio>

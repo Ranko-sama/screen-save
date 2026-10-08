@@ -1,0 +1,213 @@
+{
+  "capturedAt": "2026-10-08T01:56:04.1514120+08:00",
+  "computer": {
+    "TotalPhysicalMemory": 33873752064,
+    "NumberOfLogicalProcessors": 16
+  },
+  "modules": [
+    {
+      "ModuleName": "ScreenSave.exe",
+      "ModuleMemorySize": 40960
+    },
+    {
+      "ModuleName": "ntdll.dll",
+      "ModuleMemorySize": 2498560
+    },
+    {
+      "ModuleName": "KERNEL32.DLL",
+      "ModuleMemorySize": 827392
+    },
+    {
+      "ModuleName": "KERNELBASE.dll",
+      "ModuleMemorySize": 4231168
+    },
+    {
+      "ModuleName": "ucrtbase.dll",
+      "ModuleMemorySize": 1363968
+    },
+    {
+      "ModuleName": "USER32.dll",
+      "ModuleMemorySize": 1871872
+    },
+    {
+      "ModuleName": "win32u.dll",
+      "ModuleMemorySize": 159744
+    },
+    {
+      "ModuleName": "GDI32.dll",
+      "ModuleMemorySize": 208896
+    },
+    {
+      "ModuleName": "gdi32full.dll",
+      "ModuleMemorySize": 1200128
+    },
+    {
+      "ModuleName": "msvcp_win.dll",
+      "ModuleMemorySize": 671744
+    },
+    {
+      "ModuleName": "sechost.dll",
+      "ModuleMemorySize": 692224
+    },
+    {
+      "ModuleName": "SHELL32.dll",
+      "ModuleMemorySize": 7962624
+    },
+    {
+      "ModuleName": "ole32.dll",
+      "ModuleMemorySize": 1683456
+    },
+    {
+      "ModuleName": "combase.dll",
+      "ModuleMemorySize": 3694592
+    },
+    {
+      "ModuleName": "MAGNIFICATION.dll",
+      "ModuleMemorySize": 73728
+    },
+    {
+      "ModuleName": "RPCRT4.dll",
+      "ModuleMemorySize": 1155072
+    },
+    {
+      "ModuleName": "OLEAUT32.dll",
+      "ModuleMemorySize": 892928
+    },
+    {
+      "ModuleName": "msvcrt.dll",
+      "ModuleMemorySize": 692224
+    },
+    {
+      "ModuleName": "ADVAPI32.dll",
+      "ModuleMemorySize": 757760
+    },
+    {
+      "ModuleName": "WTSAPI32.dll",
+      "ModuleMemorySize": 155648
+    },
+    {
+      "ModuleName": "gdiplus.dll",
+      "ModuleMemorySize": 1970176
+    },
+    {
+      "ModuleName": "d3d9.dll",
+      "ModuleMemorySize": 1744896
+    },
+    {
+      "ModuleName": "CRYPT32.dll",
+      "ModuleMemorySize": 1560576
+    },
+    {
+      "ModuleName": "dwmapi.dll",
+      "ModuleMemorySize": 192512
+    },
+    {
+      "ModuleName": "SspiCli.dll",
+      "ModuleMemorySize": 294912
+    },
+    {
+      "ModuleName": "VERSION.dll",
+      "ModuleMemorySize": 45056
+    },
+    {
+      "ModuleName": "dxcore.dll",
+      "ModuleMemorySize": 315392
+    },
+    {
+      "ModuleName": "IMM32.DLL",
+      "ModuleMemorySize": 204800
+    },
+    {
+      "ModuleName": "uxtheme.dll",
+      "ModuleMemorySize": 696320
+    },
+    {
+      "ModuleName": "MSCTF.dll",
+      "ModuleMemorySize": 1441792
+    },
+    {
+      "ModuleName": "kernel.appcore.dll",
+      "ModuleMemorySize": 110592
+    },
+    {
+      "ModuleName": "bcryptPrimitives.dll",
+      "ModuleMemorySize": 684032
+    },
+    {
+      "ModuleName": "clbcatq.dll",
+      "ModuleMemorySize": 765952
+    },
+    {
+      "ModuleName": "wbemprox.dll",
+      "ModuleMemorySize": 73728
+    },
+    {
+      "ModuleName": "wbemcomn.dll",
+      "ModuleMemorySize": 503808
+    },
+    {
+      "ModuleName": "wbemsvc.dll",
+      "ModuleMemorySize": 86016
+    },
+    {
+      "ModuleName": "fastprox.dll",
+      "ModuleMemorySize": 999424
+    },
+    {
+      "ModuleName": "amsi.dll",
+      "ModuleMemorySize": 122880
+    },
+    {
+      "ModuleName": "shcore.dll",
+      "ModuleMemorySize": 1044480
+    },
+    {
+      "ModuleName": "windows.storage.dll",
+      "ModuleMemorySize": 9138176
+    },
+    {
+      "ModuleName": "shlwapi.dll",
+      "ModuleMemorySize": 421888
+    },
+    {
+      "ModuleName": "mscms.dll",
+      "ModuleMemorySize": 786432
+    },
+    {
+      "ModuleName": "Windows.Internal.Graphics.Display.DisplayColorManagement.dll",
+      "ModuleMemorySize": 593920
+    },
+    {
+      "ModuleName": "cfgmgr32.dll",
+      "ModuleMemorySize": 335872
+    },
+    {
+      "ModuleName": "textinputframework.dll",
+      "ModuleMemorySize": 1347584
+    },
+    {
+      "ModuleName": "CoreMessaging.dll",
+      "ModuleMemorySize": 1228800
+    },
+    {
+      "ModuleName": "CoreUIComponents.dll",
+      "ModuleMemorySize": 3047424
+    },
+    {
+      "ModuleName": "wintypes.dll",
+      "ModuleMemorySize": 1486848
+    },
+    {
+      "ModuleName": "CRYPTBASE.DLL",
+      "ModuleMemorySize": 49152
+    },
+    {
+      "ModuleName": "Oleacc.dll",
+      "ModuleMemorySize": 471040
+    },
+    {
+      "ModuleName": "TextShaping.dll",
+      "ModuleMemorySize": 741376
+    }
+  ]
+}

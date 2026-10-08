@@ -1,0 +1,12 @@
+{
+  "measuredAt": "2026-10-08T01:57:17.2724379+08:00",
+  "processId": 17456,
+  "exe": "D0659A7385B7510F706894D5AE4A6F2F63D2E1725BD0D1571CFC677E6A78BE21",
+  "exeBytes": 26112,
+  "initialState": "matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3",
+  "finalState": "matrix=1.000 gamma_read=1 gamma_mid=16448 gamma_white=32767 execution=3",
+  "initialBrightness": 0,
+  "finalBrightness": 0,
+  "completedRounds": 9,
+  "workload": "Existing desktop and applications; no fixed browser workload, no app-off baseline. Switching and two-second settling excluded from CPU sample."
+}

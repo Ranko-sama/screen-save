@@ -1,0 +1,34 @@
+[
+  {
+    "variant": "full",
+    "runs": 3,
+    "privateResidentKiB": 1724.0,
+    "privateResidentMinKiB": 1708.0,
+    "privateResidentMaxKiB": 1780.0,
+    "privateCommitKiB": 2436.0
+  },
+  {
+    "variant": "no-wmi",
+    "runs": 3,
+    "privateResidentKiB": 1232.0,
+    "privateResidentMinKiB": 1228.0,
+    "privateResidentMaxKiB": 1264.0,
+    "privateCommitKiB": 1852.0
+  },
+  {
+    "variant": "no-matrix",
+    "runs": 3,
+    "privateResidentKiB": 1504.0,
+    "privateResidentMinKiB": 1480.0,
+    "privateResidentMaxKiB": 1532.0,
+    "privateCommitKiB": 2136.0
+  },
+  {
+    "variant": "neither",
+    "runs": 3,
+    "privateResidentKiB": 1012.0,
+    "privateResidentMinKiB": 1008.0,
+    "privateResidentMaxKiB": 1036.0,
+    "privateCommitKiB": 1552.0
+  }
+]

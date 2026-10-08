@@ -1,0 +1,202 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build\size\system-ucrt.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following imports:
+
+    api-ms-win-crt-string-l1-1-0.dll
+             140004318 Import Address Table
+             1400062F8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          A1 wcscpy_s
+                          A6 wcsncmp
+
+    USER32.dll
+             140004170 Import Address Table
+             140006150 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         311 ReleaseDC
+                         14A GetCursorPos
+                         350 SetForegroundWindow
+                         2BD PostQuitMessage
+                           C AppendMenuW
+                          7A CreateWindowExW
+                         19B GetPhysicalCursorPos
+                         193 GetMessageW
+                          AB DefWindowProcW
+                         3DF UnregisterHotKey
+                          45 CheckMenuRadioItem
+                          B9 DestroyWindow
+                         32D SendMessageW
+                          75 CreatePopupMenu
+                         3CC TrackPopupMenu
+                          C1 DispatchMessageW
+                         2EF RegisterClassW
+                         368 SetPhysicalCursorPos
+                         2FB RegisterHotKey
+                         162 GetForegroundWindow
+                          B6 DestroyMenu
+                         269 LoadIconW
+                         14B GetDC
+
+    GDI32.dll
+             140004000 Import Address Table
+             140005FE0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         293 GetDeviceGammaRamp
+                         38F SetDeviceGammaRamp
+
+    SHELL32.dll
+             140004160 Import Address Table
+             140006140 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1BC Shell_NotifyIconW
+
+    MAGNIFICATION.dll
+             140004108 Import Address Table
+             1400060E8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          13 MagShowSystemCursor
+                           1 MagGetFullscreenColorEffect
+                           A MagSetFullscreenColorEffect
+                           8 MagInitialize
+                          14 MagUninitialize
+
+    ole32.dll
+             140004330 Import Address Table
+             140006310 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          87 CoSetProxyBlanket
+                          61 CoInitializeEx
+                          2B CoCreateInstance
+                          91 CoUninitialize
+
+    OLEAUT32.dll
+             140004138 Import Address Table
+             140006118 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                             Ordinal     6
+                             Ordinal     2
+                             Ordinal     9
+                             Ordinal     8
+
+    KERNEL32.dll
+             140004018 Import Address Table
+             140005FF8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1D4 FreeLibrary
+                         5EB TlsFree
+                         5EE TlsSetValue
+                         5EC TlsGetValue
+                         5EA TlsAlloc
+                         396 InitializeCriticalSectionAndSpinCount
+                         12F DeleteCriticalSection
+                         2DD GetProcAddress
+                         28D GetLastError
+                         517 RtlUnwindEx
+                         509 RtlCaptureContext
+                         2A5 GetModuleHandleW
+                         301 GetStartupInfoW
+                         3B0 IsDebuggerPresent
+                         39A InitializeSListHead
+                         31A GetSystemTimeAsFileTime
+                         246 GetCurrentThreadId
+                         3F6 LoadLibraryExW
+                         578 SetLastError
+                         242 GetCurrentProcessId
+                         481 QueryPerformanceCounter
+                         3B8 IsProcessorFeaturePresent
+                         5D8 TerminateProcess
+                         241 GetCurrentProcess
+                         5B8 SetUnhandledExceptionFilter
+                         5FB UnhandledExceptionFilter
+                         518 RtlVirtualUnwind
+                         511 RtlLookupFunctionEntry
+                         5A0 SetThreadExecutionState
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             140004270 Import Address Table
+             140006250 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          1E _crt_atexit
+                          67 terminate
+                          54 abort
+                          3D _register_thread_local_exe_atexit_callback
+                          55 exit
+                          2F _get_wide_winmain_command_line
+                          35 _initialize_wide_environment
+                          19 _configure_wide_argv
+                          15 _c_exit
+                          3C _register_onexit_function
+                          42 _set_app_type
+                          40 _seh_filter_exe
+                          36 _initterm
+                          16 _cexit
+                          34 _initialize_onexit_table
+                          37 _initterm_e
+                          23 _exit
+
+    api-ms-win-crt-math-l1-1-0.dll
+             140004260 Import Address Table
+             140006240 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           9 __setusermatherr
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             140004300 Import Address Table
+             1400062E0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          54 _set_fmode
+                           1 __p__commode
+
+    api-ms-win-crt-locale-l1-1-0.dll
+             140004250 Import Address Table
+             140006230 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           8 _configthreadlocale
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             140004230 Import Address Table
+             140006210 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          16 _set_new_mode
+                          18 free
+                          17 calloc
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        3000 .rdata
+        1000 .reloc
+        3000 .text

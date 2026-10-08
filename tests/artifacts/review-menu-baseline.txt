@@ -1,0 +1,25 @@
+PASS candidate_created
+PASS candidate_window_owned
+PASS owned_fixture_has_focus
+PASS hotkey_input_target
+PASS real_ctrl_alt_b_sent
+PASS real_hotkey_matrix_on
+PASS hotkey_input_target
+PASS real_ctrl_alt_b_sent
+PASS real_hotkey_matrix_off
+PASS hotkeys_keep_focus
+PASS owned_fixture_has_focus
+PASS application_popup_open
+PASS menu_input_target
+PASS menu_key_sent
+PASS escape_closes_menu
+PASS escape_restores_previous_focus
+PASS owned_fixture_has_focus
+PASS application_popup_open
+PASS menu_input_target
+PASS menu_key_sent
+PASS menu_input_target
+PASS menu_key_sent
+FAIL keyboard_menu_toggles_matrix_on
+PASS candidate_normal_exit
+FAILURES=1

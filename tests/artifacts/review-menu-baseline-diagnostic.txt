@@ -1,0 +1,34 @@
+PASS candidate_created
+PASS candidate_window_owned
+PASS owned_fixture_has_focus
+PASS hotkey_input_target
+PASS real_ctrl_alt_b_sent
+MATRIX real_hotkey_matrix_on expected_dark=1 rgb=0.000,0.000,0.000
+PASS real_hotkey_matrix_on
+PASS hotkey_input_target
+PASS real_ctrl_alt_b_sent
+MATRIX real_hotkey_matrix_off expected_dark=0 rgb=1.000,1.000,1.000
+PASS real_hotkey_matrix_off
+PASS hotkeys_keep_focus
+PASS owned_fixture_has_focus
+MENU opened key=0 popup=00000000000D057C foreground=00000000000F0654 foreground_pid=3828 focus=00000000000F0654 flags=20 item0(id=1,state=0) item1(id=4294967295,state=528) item2(id=2,state=0)
+PASS application_popup_open
+PASS menu_input_target
+MENU after_key key=27 popup=0000000000000000 foreground=000000000044056C foreground_pid=1976 focus=0000000000000000 flags=0
+PASS menu_key_sent
+PASS escape_closes_menu
+PASS escape_restores_previous_focus
+PASS owned_fixture_has_focus
+MENU opened key=0 popup=00000000000A0678 foreground=00000000000F0654 foreground_pid=3828 focus=00000000000F0654 flags=20 item0(id=1,state=0) item1(id=4294967295,state=528) item2(id=2,state=0)
+PASS application_popup_open
+PASS menu_input_target
+MENU after_key key=36 popup=00000000000A0678 foreground=00000000000F0654 foreground_pid=3828 focus=00000000000F0654 flags=20 item0(id=1,state=0) item1(id=4294967295,state=528) item2(id=2,state=0)
+PASS menu_key_sent
+PASS menu_input_target
+MENU after_key key=13 popup=0000000000000000 foreground=000000000044056C foreground_pid=1976 focus=0000000000000000 flags=0
+PASS menu_key_sent
+MATRIX keyboard_menu_toggles_matrix_on expected_dark=1 rgb=1.000,1.000,1.000
+MENU matrix_assertion_failed key=0 popup=0000000000000000 foreground=000000000044056C foreground_pid=1976 focus=0000000000000000 flags=0
+FAIL keyboard_menu_toggles_matrix_on
+PASS candidate_normal_exit
+FAILURES=1

@@ -1,0 +1,218 @@
+[
+  {
+    "name": "baseline_no_translate",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "Remove character translation from the hidden-window message loop.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_translate.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_translate.exe"
+  },
+  {
+    "name": "baseline_no_inactive_writes",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "Selecting a mode while inactive changes only the selected mode.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_inactive_writes.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_inactive_writes.exe"
+  },
+  {
+    "name": "baseline_no_mode_power",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "Do not repeat the continuous power request when switching modes.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_mode_power.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_mode_power.exe"
+  },
+  {
+    "name": "baseline_local_tray",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "Keep tray data local to its only owning function.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_local_tray.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_local_tray.exe"
+  },
+  {
+    "name": "baseline_matrix_bool",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "Replace the obsolete numeric matrix gain with black-or-original output.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_matrix_bool.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_matrix_bool.exe"
+  },
+  {
+    "name": "baseline_no_wrapper",
+    "base": "baseline_no_mode_power",
+    "test": "toggle",
+    "expectedFailure": false,
+    "description": "After removing repeated mode power requests, inline the one remaining wrapper call.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_wrapper.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\baseline_no_wrapper.exe"
+  },
+  {
+    "name": "optimized_no_com_blanket",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": null,
+    "description": "Experiment: determine whether the explicit local WMI proxy blanket is necessary on this machine.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\optimized_no_com_blanket.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\optimized_no_com_blanket.exe"
+  },
+  {
+    "name": "no_old_output_restore",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: leave the previous mode active during a mode switch.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_old_output_restore.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_old_output_restore.exe"
+  },
+  {
+    "name": "no_matrix_zero",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: matrix mode no longer writes black RGB output.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_matrix_zero.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_matrix_zero.exe"
+  },
+  {
+    "name": "no_gamma_gain",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: Gamma mode writes the original ramp without dimming.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_gamma_gain.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_gamma_gain.exe"
+  },
+  {
+    "name": "no_hardware_write",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: hardware brightness writes do nothing.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_hardware_write.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_hardware_write.exe"
+  },
+  {
+    "name": "no_brightness_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: discard the hardware brightness restore snapshot.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_brightness_snapshot.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_brightness_snapshot.exe"
+  },
+  {
+    "name": "no_matrix_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: discard the original matrix snapshot.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_matrix_snapshot.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_matrix_snapshot.exe"
+  },
+  {
+    "name": "no_gamma_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: discard the original Gamma ramp snapshot.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_gamma_snapshot.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_gamma_snapshot.exe"
+  },
+  {
+    "name": "no_exit_restore",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: exit an active dark session without restoring its state.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_exit_restore.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_exit_restore.exe"
+  },
+  {
+    "name": "no_keepalive",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: never request display or system keep-awake.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_keepalive.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_keepalive.exe"
+  },
+  {
+    "name": "no_continuous",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: issue only an idle-timer reset, not a persistent keep-awake request.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_continuous.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_continuous.exe"
+  },
+  {
+    "name": "no_display_request",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: omit the display keep-awake requirement.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_display_request.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_display_request.exe"
+  },
+  {
+    "name": "no_system_request",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "description": "Negative control: omit the system keep-awake requirement.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_system_request.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_system_request.exe"
+  },
+  {
+    "name": "no_cursor_visibility",
+    "base": "optimized",
+    "test": "cursor",
+    "expectedFailure": true,
+    "description": "Negative control: omit hiding and showing the system cursor.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_cursor_visibility.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_cursor_visibility.exe"
+  },
+  {
+    "name": "no_cursor_refresh",
+    "base": "optimized",
+    "test": "cursor",
+    "expectedFailure": true,
+    "description": "Negative control: omit the physical-position refresh required for stationary cursor restoration.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_cursor_refresh.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_cursor_refresh.exe"
+  },
+  {
+    "name": "no_single_owner",
+    "base": "optimized",
+    "test": "review",
+    "expectedFailure": true,
+    "description": "Negative control: continue running when another instance already owns the hotkey and display session.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_single_owner.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_single_owner.exe"
+  },
+  {
+    "name": "old_handoff_order",
+    "base": "optimized",
+    "test": "review",
+    "expectedFailure": true,
+    "description": "Negative control: remove the old effect before enabling the new effect, exposing a bright interval.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\old_handoff_order.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\old_handoff_order.exe"
+  },
+  {
+    "name": "no_focus_guard",
+    "base": "optimized",
+    "test": "menu",
+    "expectedFailure": true,
+    "description": "Negative control: restoring the previous foreground unconditionally steals a newly clicked window focus.",
+    "source": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_focus_guard.cpp",
+    "executable": "C:\\Codex Project\\screen-save\\build\\review\\ablation\\no_focus_guard.exe"
+  }
+]

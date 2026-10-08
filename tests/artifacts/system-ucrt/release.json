@@ -1,0 +1,13 @@
+{
+  "measuredAt": "2026-10-08T01:41:06.2374033+08:00",
+  "pid": 7416,
+  "seconds": 30.0195247,
+  "cpuMilliseconds": 0.0,
+  "workingSetBytes": 15814656,
+  "privateBytes": 2400256,
+  "exeBytes": 26112,
+  "sha256": "D0659A7385B7510F706894D5AE4A6F2F63D2E1725BD0D1571CFC677E6A78BE21",
+  "sourceSha256": "28095AE0117F991CE6AA202A242E2E1A36A6BB8D2BC6B1AF89C338CE82E6765C",
+  "originalBytes": 104960,
+  "state": "normal, matrix selected, no keepawake request"
+}

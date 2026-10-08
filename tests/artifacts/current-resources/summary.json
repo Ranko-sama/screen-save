@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "normal",
+    "seconds": 46.7600889,
+    "cpuMilliseconds": 0.0,
+    "privateResidentMiB": 2.22265625,
+    "privateCommitMiB": 3.296875,
+    "totalWorkingMiB": 20.84375,
+    "dwmCpuOneCorePercent": 4.522237880080672,
+    "dwmGpuEngineSumPercent": 0.4863434893084714
+  },
+  {
+    "mode": "matrix",
+    "seconds": 46.4838259,
+    "cpuMilliseconds": 0.0,
+    "privateResidentMiB": 2.2135416666666665,
+    "privateCommitMiB": 3.2822916666666666,
+    "totalWorkingMiB": 20.840364583333333,
+    "dwmCpuOneCorePercent": 5.73938198034938,
+    "dwmGpuEngineSumPercent": 0.5575677586037827
+  },
+  {
+    "mode": "gamma",
+    "seconds": 46.4674569,
+    "cpuMilliseconds": 0.0,
+    "privateResidentMiB": 2.09375,
+    "privateCommitMiB": 3.1640625,
+    "totalWorkingMiB": 20.71484375,
+    "dwmCpuOneCorePercent": 4.099015985295773,
+    "dwmGpuEngineSumPercent": 0.9462413437959865
+  }
+]

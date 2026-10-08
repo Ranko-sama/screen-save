@@ -1,0 +1,134 @@
+[
+  {
+    "variant": "full",
+    "round": 1,
+    "processId": 1464,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1822720.0,
+    "privateCommitBytes": 2560000.0,
+    "totalWorkingBytes": 16515072.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 7
+  },
+  {
+    "variant": "no-wmi",
+    "round": 1,
+    "processId": 19324,
+    "exeBytes": 24576,
+    "privateResidentBytes": 1294336.0,
+    "privateCommitBytes": 1921024.0,
+    "totalWorkingBytes": 11812864.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  },
+  {
+    "variant": "no-matrix",
+    "round": 1,
+    "processId": 11804,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1568768.0,
+    "privateCommitBytes": 2224128.0,
+    "totalWorkingBytes": 15142912.0,
+    "cpuSecondsIncludingStartup": 0.03125,
+    "threads": 7
+  },
+  {
+    "variant": "neither",
+    "round": 1,
+    "processId": 16060,
+    "exeBytes": 24064,
+    "privateResidentBytes": 1060864.0,
+    "privateCommitBytes": 1617920.0,
+    "totalWorkingBytes": 10395648.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  },
+  {
+    "variant": "neither",
+    "round": 2,
+    "processId": 15220,
+    "exeBytes": 24064,
+    "privateResidentBytes": 1032192.0,
+    "privateCommitBytes": 1589248.0,
+    "totalWorkingBytes": 9908224.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  },
+  {
+    "variant": "no-matrix",
+    "round": 2,
+    "processId": 8532,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1515520.0,
+    "privateCommitBytes": 2162688.0,
+    "totalWorkingBytes": 14577664.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 7
+  },
+  {
+    "variant": "no-wmi",
+    "round": 2,
+    "processId": 8540,
+    "exeBytes": 24576,
+    "privateResidentBytes": 1257472.0,
+    "privateCommitBytes": 1888256.0,
+    "totalWorkingBytes": 11235328.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  },
+  {
+    "variant": "full",
+    "round": 2,
+    "processId": 6448,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1748992.0,
+    "privateCommitBytes": 2486272.0,
+    "totalWorkingBytes": 15888384.0,
+    "cpuSecondsIncludingStartup": 0.03125,
+    "threads": 7
+  },
+  {
+    "variant": "no-matrix",
+    "round": 3,
+    "processId": 15028,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1540096.0,
+    "privateCommitBytes": 2187264.0,
+    "totalWorkingBytes": 14598144.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 7
+  },
+  {
+    "variant": "full",
+    "round": 3,
+    "processId": 8332,
+    "exeBytes": 26112,
+    "privateResidentBytes": 1765376.0,
+    "privateCommitBytes": 2494464.0,
+    "totalWorkingBytes": 15896576.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 7
+  },
+  {
+    "variant": "neither",
+    "round": 3,
+    "processId": 5384,
+    "exeBytes": 24064,
+    "privateResidentBytes": 1036288.0,
+    "privateCommitBytes": 1589248.0,
+    "totalWorkingBytes": 9916416.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  },
+  {
+    "variant": "no-wmi",
+    "round": 3,
+    "processId": 17888,
+    "exeBytes": 24576,
+    "privateResidentBytes": 1261568.0,
+    "privateCommitBytes": 1896448.0,
+    "totalWorkingBytes": 11239424.0,
+    "cpuSecondsIncludingStartup": 0.015625,
+    "threads": 4
+  }
+]

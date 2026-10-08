@@ -1,0 +1,23 @@
+BASELINE hardware=0 power=0
+PASS startup hardware=60 expected=60 matrix=1 gamma=1 power=0
+PASS hotkeys PageDown_free=1 PageUp_free=1 toggle_owned=1 error=1409
+PASS removed_step_commands hardware=60 expected=60 matrix=1 gamma=1 power=0
+FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=0 gamma=1 power=3
+FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3
+FAIL reselect_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3
+FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=0 gamma=1 power=3
+FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=0 gamma=1 power=3
+FAIL gamma_off_restores_session_brightness hardware=60 expected=60 matrix=0 gamma=1 power=0
+FAIL new_gamma_session hardware=0 expected=0 matrix=0 gamma=1 power=3
+FAIL new_session_restores_37_not_startup_60 hardware=37 expected=37 matrix=0 gamma=1 power=0
+FAIL gamma_before_exit hardware=0 expected=0 matrix=0 gamma=1 power=3
+PASS exit_code=0
+PASS exit_from_gamma hardware=37 expected=37 matrix=1 gamma=1 power=0
+FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=0 gamma=1 power=3
+FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=0 gamma=1 power=3
+PASS exit_code=0
+PASS exit_from_matrix_keeps_hardware hardware=43 expected=43 matrix=1 gamma=1 power=0
+PASS exit_code=0
+PASS exit_without_activating hardware=43 expected=43 matrix=1 gamma=1 power=0
+PASS test_cleanup hardware=0 expected=0 matrix=1 gamma=1 power=0
+FAILURES=11

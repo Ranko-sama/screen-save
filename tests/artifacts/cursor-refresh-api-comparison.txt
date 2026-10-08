@@ -1,0 +1,7 @@
+hook=00000000033306B5 error=0
+kind=0 result=1 error=0
+events=0 position=504,535->504,535
+kind=1 result=1 error=0
+events=0 position=504,535->504,535
+kind=2 result=1 error=0
+events=0 position=504,535->504,535

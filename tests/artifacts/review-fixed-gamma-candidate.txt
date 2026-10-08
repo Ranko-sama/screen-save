@@ -1,0 +1,44 @@
+BASELINE hardware=0 gamma_white=65535
+PASS create_process
+PASS external_test_state_accepted
+PASS inactive_choose_gamma_preserves_external_colors
+PASS inactive_choose_matrix_preserves_external_colors
+PASS matrix_restores_session_colors
+NONDEFAULT_GAMMA before_white=49151 dark_white=32767
+PASS gamma_uses_accepted_dark_table_after_external_change
+PASS gamma_restores_session_colors
+PASS normal_exit
+PASS create_process
+TRANSITION target=4 unmodified_color_samples=0
+PASS dark_handoff_has_no_full_color_gap
+TRANSITION target=3 unmodified_color_samples=0
+PASS dark_handoff_has_no_full_color_gap
+PASS normal_exit
+SECOND_INSTANCE_CASE=0 (0=normal 1=matrix 2=gamma)
+PASS create_process
+PASS create_process
+PASS second_instance_exits
+PASS no_second_instance_color_poisoning
+PASS normal_exit
+PASS normal_exit
+SECOND_INSTANCE_CASE=1 (0=normal 1=matrix 2=gamma)
+PASS create_process
+PASS create_process
+PASS second_instance_exits
+PASS no_second_instance_color_poisoning
+PASS normal_exit
+PASS normal_exit
+SECOND_INSTANCE_CASE=2 (0=normal 1=matrix 2=gamma)
+PASS create_process
+PASS create_process
+PASS second_instance_exits
+PASS no_second_instance_color_poisoning
+PASS normal_exit
+PASS normal_exit
+PASS test_reserves_hotkey
+PASS create_process
+PASS no_instance_without_restore_hotkey
+PASS normal_exit
+PASS hotkey_conflict_preserves_colors
+PASS final_cleanup
+FAILURES=0

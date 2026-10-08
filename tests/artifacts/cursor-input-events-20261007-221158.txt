@@ -1,0 +1,7 @@
+PASS matrix_on moves=0 expected=0 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+FAIL matrix_off moves=0 expected=1 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+PASS matrix_on_again moves=0 expected=0 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+FAIL matrix_to_gamma moves=0 expected=1 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+PASS gamma_to_matrix moves=0 expected=0 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+FAIL matrix_exit moves=0 expected=1 other_input=0 wrong_positions=0 position=688,864->688,864 focus_unchanged=1
+exit_code=0 FAILURES=3

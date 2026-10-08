@@ -1,0 +1,16 @@
+{
+  "measuredAt": "2026-10-08T10:39:52.9188868+08:00",
+  "snapshot": {
+    "pid": 25824,
+    "privateResident": 1830912,
+    "privateCommit": 2949120,
+    "workingSet": 19464192,
+    "cpuMs": 78.125,
+    "matrix": 1.0,
+    "gammaWhite": 65535,
+    "execution": 0
+  },
+  "hardwareBrightness": 100,
+  "userConfirmation": "全黑和恢复正常，光标立即出现",
+  "scope": "One manual matrix black/restore cycle. No automatic switching."
+}

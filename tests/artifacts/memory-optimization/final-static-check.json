@@ -1,0 +1,8 @@
+{
+  "measuredAt": "2026-10-08T10:41:52.3128590+08:00",
+  "candidateCodeMatchesReleaseIgnoringComments": true,
+  "outputStateAndWindowLogicMatchesBaseline": true,
+  "releaseSourceHash": "F7EDED03ECF11EFD70C094AAE46F44E6496FF43F609757576C9F6CEE5A265E29",
+  "releaseExeHash": "0697798FDAAF72C928C260E8D5C9BF4EE3E2481FC4C0517E5A2E15D76A99BD0E",
+  "releaseExeBytes": 25600
+}

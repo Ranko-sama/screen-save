@@ -1,97 +1,74 @@
 #include <windows.h>
 #include <shellapi.h>
 #include <magnification.h>
-#include <wbemidl.h>
+#include <wmistr.h>
+#include <cstring>
 
 constexpr UINT TrayMessage = WM_APP + 1;
-IWbemServices* wmi;
-IWbemClassObject* brightnessArguments;
-BSTR brightnessMethodPath;
 MAGCOLOREFFECT originalColors;
 HDC display;
 WORD originalGamma[3][256];
 enum class DimmingMode { Matrix, Gamma };
 DimmingMode dimmingMode = DimmingMode::Matrix;
-NOTIFYICONDATAW tray{};
 bool isDark = false;
 int brightnessBeforeDark;
 
-IWbemClassObject* Query(const wchar_t* text) {
-    BSTR language = SysAllocString(L"WQL");
-    BSTR query = SysAllocString(text);
-    IEnumWbemClassObject* rows;
-    wmi->ExecQuery(language, query, WBEM_FLAG_FORWARD_ONLY | WBEM_FLAG_RETURN_IMMEDIATELY,
-        nullptr, &rows);
-    IWbemClassObject* row;
-    ULONG count;
-    rows->Next(WBEM_INFINITE, 1, &row, &count);
-    rows->Release();
-    SysFreeString(query);
-    SysFreeString(language);
-    return row;
-}
+// This laptop exposes one 296-byte WNODE with one display instance.
+// Native WMI exports are resolved locally; this is not a portable brightness API.
+HMODULE brightnessLibrary;
+HANDLE brightnessDataBlock, brightnessMethodBlock;
+ULONG (WINAPI* nativeOpen)(GUID*, ULONG, HANDLE*);
+ULONG (WINAPI* nativeQuery)(HANDLE, ULONG*, void*);
+ULONG (WINAPI* nativeClose)(HANDLE);
+ULONG (WINAPI* nativeExecute)(HANDLE, const wchar_t*, ULONG, ULONG, void*, ULONG*, void*);
+wchar_t brightnessInstance[128];
 
 void OpenBrightness() {
-    CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);
-    IWbemLocator* locator;
-    CoCreateInstance(CLSID_WbemLocator, nullptr, CLSCTX_INPROC_SERVER, IID_IWbemLocator,
-        reinterpret_cast<void**>(&locator));
-    BSTR nameSpace = SysAllocString(L"ROOT\\WMI");
-    locator->ConnectServer(nameSpace, nullptr, nullptr, nullptr, 0, nullptr, nullptr, &wmi);
-    SysFreeString(nameSpace);
-    locator->Release();
-    CoSetProxyBlanket(wmi, RPC_C_AUTHN_WINNT, RPC_C_AUTHZ_NONE, nullptr,
-        RPC_C_AUTHN_LEVEL_CALL, RPC_C_IMP_LEVEL_IMPERSONATE, nullptr, EOAC_NONE);
-
-    auto instance = Query(L"SELECT * FROM WmiMonitorBrightnessMethods WHERE Active=TRUE");
-    VARIANT value;
-    VariantInit(&value);
-    instance->Get(L"__PATH", 0, &value, nullptr, nullptr);
-    brightnessMethodPath = SysAllocString(value.bstrVal);
-    VariantClear(&value);
-    instance->Release();
-
-    BSTR className = SysAllocString(L"WmiMonitorBrightnessMethods");
-    IWbemClassObject* definition;
-    wmi->GetObject(className, 0, nullptr, &definition, nullptr);
-    SysFreeString(className);
-    IWbemClassObject* parameters;
-    definition->GetMethod(L"WmiSetBrightness", 0, &parameters, nullptr);
-    parameters->SpawnInstance(0, &brightnessArguments);
-    parameters->Release();
-    definition->Release();
-    value.vt = VT_I4;
-    value.lVal = 0;
-    brightnessArguments->Put(L"Timeout", 0, &value, 0);
+    brightnessLibrary = LoadLibraryW(L"advapi32.dll");
+    nativeOpen = reinterpret_cast<decltype(nativeOpen)>(GetProcAddress(brightnessLibrary, "WmiOpenBlock"));
+    nativeQuery = reinterpret_cast<decltype(nativeQuery)>(GetProcAddress(brightnessLibrary, "WmiQueryAllDataW"));
+    nativeClose = reinterpret_cast<decltype(nativeClose)>(GetProcAddress(brightnessLibrary, "WmiCloseBlock"));
+    nativeExecute = reinterpret_cast<decltype(nativeExecute)>(GetProcAddress(brightnessLibrary, "WmiExecuteMethodW"));
+    GUID data{0xd43412ac, 0x67f9, 0x4fbb, {0xa0, 0x81, 0x17, 0x52, 0xa2, 0xc3, 0x3e, 0x84}};
+    GUID methods{0x479b20b4, 0x5559, 0x46fe, {0xbe, 0x97, 0x7d, 0x22, 0x21, 0x54, 0x42, 0x1f}};
+    nativeOpen(&data, WMIGUID_QUERY, &brightnessDataBlock);
+    nativeOpen(&methods, WMIGUID_EXECUTE, &brightnessMethodBlock);
+    alignas(8) BYTE bytes[512]{};
+    ULONG size = sizeof(bytes);
+    nativeQuery(brightnessDataBlock, &size, bytes);
+    auto node = reinterpret_cast<WNODE_ALL_DATA*>(bytes);
+    auto nameOffsets = reinterpret_cast<ULONG*>(bytes + node->OffsetInstanceNameOffsets);
+    const BYTE* name = bytes + nameOffsets[0];
+    const USHORT nameBytes = *reinterpret_cast<const USHORT*>(name);
+    memcpy(brightnessInstance, name + sizeof(USHORT), nameBytes);
+    brightnessInstance[nameBytes / sizeof(wchar_t)] = 0;
 }
 
 int ReadBrightness() {
-    auto row = Query(L"SELECT CurrentBrightness FROM WmiMonitorBrightness WHERE Active=TRUE");
-    VARIANT value;
-    VariantInit(&value);
-    row->Get(L"CurrentBrightness", 0, &value, nullptr, nullptr);
-    const int brightness = value.bVal;
-    VariantClear(&value);
-    row->Release();
-    return brightness;
+    alignas(8) BYTE bytes[512]{};
+    ULONG size = sizeof(bytes);
+    nativeQuery(brightnessDataBlock, &size, bytes);
+    return bytes[reinterpret_cast<WNODE_ALL_DATA*>(bytes)->DataBlockOffset];
 }
 
 void SetBrightness(int brightness) {
-    VARIANT value;
-    VariantInit(&value);
-    value.vt = VT_UI1;
-    value.bVal = static_cast<BYTE>(brightness);
-    brightnessArguments->Put(L"Brightness", 0, &value, 0);
-    BSTR method = SysAllocString(L"WmiSetBrightness");
-    wmi->ExecMethod(brightnessMethodPath, method,
-        0, nullptr, brightnessArguments, nullptr, nullptr);
-    SysFreeString(method);
+    // WmiSetBrightness method 1: uint32 Timeout (0), then uint8 Brightness.
+    BYTE parameters[5]{0, 0, 0, 0, static_cast<BYTE>(brightness)};
+    ULONG result = 0, resultBytes = sizeof(result);
+    nativeExecute(brightnessMethodBlock, brightnessInstance, 1,
+        sizeof(parameters), parameters, &resultBytes, &result);
 }
 
-void ApplyOutput(bool dark) {
-    if (dimmingMode == DimmingMode::Gamma) {
+void CloseBrightness() {
+    nativeClose(brightnessMethodBlock);
+    nativeClose(brightnessDataBlock);
+    FreeLibrary(brightnessLibrary);
+}
+
+void ApplyOutput(DimmingMode mode, bool dark) {
+    if (mode == DimmingMode::Gamma) {
         WORD ramp[3][256];
-        // 0.5 is this laptop's lowest accepted linear Gamma gain.
+        // The 0.5 scale was verified on this laptop; keep the original curve.
         for (int channel = 0; channel < 3; ++channel)
             for (int entry = 0; entry < 256; ++entry)
                 ramp[channel][entry] = static_cast<WORD>(
@@ -99,35 +76,44 @@ void ApplyOutput(bool dark) {
         SetDeviceGammaRamp(display, ramp);
     } else {
         auto colors = originalColors;
-        const float gain = dark ? 0.0f : 1.0f;
-        for (int row = 0; row < 5; ++row)
-            for (int column = 0; column < 3; ++column)
-                colors.transform[row][column] *= gain;
+        if (dark)
+            for (int row = 0; row < 5; ++row)
+                for (int column = 0; column < 3; ++column)
+                    colors.transform[row][column] = 0.0f;
         MagSetFullscreenColorEffect(&colors);
+        MagShowSystemCursor(!dark);
+        if (!dark) {
+            // Refresh the cursor at its current physical pixel, without DPI rounding.
+            POINT cursor;
+            GetPhysicalCursorPos(&cursor);
+            SetPhysicalCursorPos(cursor.x, cursor.y);
+        }
     }
 }
 
-void ApplyDimming() {
-    ApplyOutput(isDark);
+void ToggleBlack() {
+    // Keep one restore snapshot for this dark session, including mode switches.
+    if (!isDark) {
+        brightnessBeforeDark = ReadBrightness();
+        MagGetFullscreenColorEffect(&originalColors);
+        GetDeviceGammaRamp(display, originalGamma);
+    }
+    isDark = !isDark;
+    if (dimmingMode == DimmingMode::Gamma)
+        SetBrightness(isDark ? 0 : brightnessBeforeDark);
+    ApplyOutput(dimmingMode, isDark);
     SetThreadExecutionState(ES_CONTINUOUS |
         (isDark ? ES_SYSTEM_REQUIRED | ES_DISPLAY_REQUIRED : 0));
 }
 
-void ToggleBlack() {
-    // Keep one restore value for this session, including mode switches.
-    if (!isDark) brightnessBeforeDark = ReadBrightness();
-    isDark = !isDark;
-    if (dimmingMode == DimmingMode::Gamma)
-        SetBrightness(isDark ? 0 : brightnessBeforeDark);
-    ApplyDimming();
-}
-
 void SelectMode(DimmingMode mode) {
     if (mode == dimmingMode) return;
-    ApplyOutput(false);
-    if (isDark) SetBrightness(mode == DimmingMode::Gamma ? 0 : brightnessBeforeDark);
+    if (isDark) {
+        ApplyOutput(mode, true);
+        SetBrightness(mode == DimmingMode::Gamma ? 0 : brightnessBeforeDark);
+        ApplyOutput(dimmingMode, false);
+    }
     dimmingMode = mode;
-    ApplyDimming();
 }
 
 LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) {
@@ -152,18 +138,18 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) 
         const int command = TrackPopupMenu(menu, TPM_RETURNCMD | TPM_NONOTIFY,
             cursor.x, cursor.y, 0, window, nullptr);
         DestroyMenu(menu);
-        SetForegroundWindow(foreground);
+        if (GetForegroundWindow() == window) SetForegroundWindow(foreground);
         if (command) SendMessageW(window, WM_COMMAND, command, 0);
         return 0;
     }
     if (message == WM_COMMAND) {
         if (LOWORD(w) == 1) ToggleBlack();
-        if (LOWORD(w) == 2) DestroyWindow(window);
+        if (LOWORD(w) == 2) SendMessageW(window, WM_CLOSE, 0, 0);
         if (LOWORD(w) == 3) SelectMode(DimmingMode::Matrix);
         if (LOWORD(w) == 4) SelectMode(DimmingMode::Gamma);
         return 0;
     }
-    if (message == WM_DESTROY) {
+    if (message == WM_CLOSE) {
         PostQuitMessage(0);
         return 0;
     }
@@ -171,11 +157,6 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) 
 }
 
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
-    OpenBrightness();
-    MagInitialize();
-    MagGetFullscreenColorEffect(&originalColors);
-    display = GetDC(nullptr);
-    GetDeviceGammaRamp(display, originalGamma);
     WNDCLASSW cls{};
     cls.hInstance = instance;
     cls.lpfnWndProc = WindowProcedure;
@@ -184,7 +165,15 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     // Invisible message receiver only; no covering or rendering window.
     HWND window = CreateWindowW(cls.lpszClassName, L"Screen Save", 0,
         0, 0, 0, 0, nullptr, nullptr, instance, nullptr);
-    RegisterHotKey(window, 3, MOD_CONTROL | MOD_ALT | MOD_NOREPEAT, 'B');
+    // The fixed hotkey owns the display session through final restoration.
+    if (!RegisterHotKey(window, 3, MOD_CONTROL | MOD_ALT | MOD_NOREPEAT, 'B')) {
+        DestroyWindow(window);
+        return 0;
+    }
+    OpenBrightness();
+    MagInitialize();
+    display = GetDC(nullptr);
+    NOTIFYICONDATAW tray{};
     tray.cbSize = sizeof(tray);
     tray.hWnd = window;
     tray.uID = 1;
@@ -195,17 +184,14 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     Shell_NotifyIconW(NIM_ADD, &tray);
     MSG message;
     while (GetMessageW(&message, nullptr, 0, 0) > 0) {
-        TranslateMessage(&message);
         DispatchMessageW(&message);
     }
     if (isDark) ToggleBlack();
     Shell_NotifyIconW(NIM_DELETE, &tray);
-    UnregisterHotKey(window, 3);
     MagUninitialize();
     ReleaseDC(nullptr, display);
-    brightnessArguments->Release();
-    wmi->Release();
-    SysFreeString(brightnessMethodPath);
-    CoUninitialize();
+    CloseBrightness();
+    UnregisterHotKey(window, 3);
+    DestroyWindow(window);
     return 0;
 }

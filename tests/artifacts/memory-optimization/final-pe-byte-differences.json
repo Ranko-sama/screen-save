@@ -1,0 +1,32 @@
+[
+  {
+    "fileOffset": "0xF8",
+    "candidate": 64,
+    "release": 172
+  },
+  {
+    "fileOffset": "0xF9",
+    "candidate": 254,
+    "release": 2
+  },
+  {
+    "fileOffset": "0xFA",
+    "candidate": 198,
+    "release": 199
+  },
+  {
+    "fileOffset": "0x4774",
+    "candidate": 64,
+    "release": 172
+  },
+  {
+    "fileOffset": "0x4775",
+    "candidate": 254,
+    "release": 2
+  },
+  {
+    "fileOffset": "0x4776",
+    "candidate": 198,
+    "release": 199
+  }
+]

@@ -1,0 +1,318 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build\memory-optimization\native-minimal-startup.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+            8664 machine (x64)
+               5 number of sections
+        6AC6FFFF time date stamp Thu Oct  8 10:29:19 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              F0 size of optional header
+              22 characteristics
+                   Executable
+                   Application can handle large (>2GB) addresses
+
+OPTIONAL HEADER VALUES
+             20B magic # (PE32+)
+           14.44 linker version
+            1A00 size of code
+            2200 size of initialized data
+               0 size of uninitialized data
+            1988 entry point (0000000140001988)
+            1000 base of code
+       140000000 image base (0000000140000000 to 0000000140006FFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            0.00 image version
+            6.00 subsystem version
+               0 Win32 version
+            7000 size of image
+             400 size of headers
+               0 checksum
+               2 subsystem (Windows GUI)
+            8160 DLL characteristics
+                   High Entropy Virtual Addresses
+                   Dynamic base
+                   NX compatible
+                   Terminal Server Aware
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+               0 [       0] RVA [size] of Export Directory
+            38BC [      78] RVA [size] of Import Directory
+               0 [       0] RVA [size] of Resource Directory
+            5000 [     114] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+            6000 [      2C] RVA [size] of Base Relocation Directory
+            3440 [      1C] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+               0 [       0] RVA [size] of Thread Storage Directory
+            3300 [     140] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+            3000 [     1B0] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+    1858 virtual size
+    1000 virtual address (0000000140001000 to 0000000140002857)
+    1A00 size of raw data
+     400 file pointer to raw data (00000400 to 00001DFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+     EFC virtual size
+    3000 virtual address (0000000140003000 to 0000000140003EFB)
+    1000 size of raw data
+    1E00 file pointer to raw data (00001E00 to 00002DFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6AC6FFFF coffgrp      148 00003638     2438    4C544347 (LTCG)
+
+  Section contains the following imports:
+
+    USER32.dll
+             1400030F0 Import Address Table
+             140003A28 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         311 ReleaseDC
+                         19B GetPhysicalCursorPos
+                         193 GetMessageW
+                          AB DefWindowProcW
+                         3DF UnregisterHotKey
+                          45 CheckMenuRadioItem
+                          B9 DestroyWindow
+                         14B GetDC
+                          7A CreateWindowExW
+                         32D SendMessageW
+                          75 CreatePopupMenu
+                         3CC TrackPopupMenu
+                          C1 DispatchMessageW
+                         2EF RegisterClassW
+                         368 SetPhysicalCursorPos
+                         2FB RegisterHotKey
+                         162 GetForegroundWindow
+                          B6 DestroyMenu
+                         269 LoadIconW
+                           C AppendMenuW
+                         2BD PostQuitMessage
+                         350 SetForegroundWindow
+                         14A GetCursorPos
+
+    GDI32.dll
+             140003000 Import Address Table
+             140003938 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         38F SetDeviceGammaRamp
+                         293 GetDeviceGammaRamp
+
+    SHELL32.dll
+             1400030E0 Import Address Table
+             140003A18 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1BC Shell_NotifyIconW
+
+    MAGNIFICATION.dll
+             1400030B0 Import Address Table
+             1400039E8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           8 MagInitialize
+                          14 MagUninitialize
+                           A MagSetFullscreenColorEffect
+                          13 MagShowSystemCursor
+                           1 MagGetFullscreenColorEffect
+
+    KERNEL32.dll
+             140003018 Import Address Table
+             140003950 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         241 GetCurrentProcess
+                         5B8 SetUnhandledExceptionFilter
+                         5FB UnhandledExceptionFilter
+                         518 RtlVirtualUnwind
+                         511 RtlLookupFunctionEntry
+                         509 RtlCaptureContext
+                         31A GetSystemTimeAsFileTime
+                         5D8 TerminateProcess
+                         242 GetCurrentProcessId
+                         481 QueryPerformanceCounter
+                         1D4 FreeLibrary
+                         3B8 IsProcessorFeaturePresent
+                         5A0 SetThreadExecutionState
+                         186 ExitProcess
+                         2DD GetProcAddress
+                         3F7 LoadLibraryW
+                         246 GetCurrentThreadId
+                         2A5 GetModuleHandleW
+
+  Section contains the following load config:
+
+            00000140 size
+                   0 time date stamp
+                0.00 Version
+                   0 GlobalFlags Clear
+                   0 GlobalFlags Set
+                   0 Critical Section Default Timeout
+                   0 Decommit Free Block Threshold
+                   0 Decommit Total Free Threshold
+    0000000000000000 Lock Prefix Table
+                   0 Maximum Allocation Size
+                   0 Virtual Memory Threshold
+                   0 Process Affinity Mask
+                   0 Process Heap Flags
+                   0 CSD Version
+                0000 Dependent Load Flag
+    0000000000000000 Edit List
+    0000000140004000 Security Cookie
+    00000001400031B0 Guard CF address of check-function pointer
+    00000001400031C0 Guard CF address of dispatch-function pointer
+    0000000000000000 Guard CF function table
+                   0 Guard CF function count
+            00000100 Guard Flags
+                       CF instrumented
+                0000 Code Integrity Flags
+                0000 Code Integrity Catalog
+            00000000 Code Integrity Catalog Offset
+            00000000 Code Integrity Reserved
+    0000000000000000 Guard CF address taken IAT entry table
+                   0 Guard CF address taken IAT entry count
+    0000000000000000 Guard CF long jump target table
+                   0 Guard CF long jump target count
+    0000000000000000 Dynamic value relocation table
+    0000000000000000 Hybrid metadata pointer
+    0000000000000000 Guard RF address of failure-function
+    0000000000000000 Guard RF address of failure-function pointer
+            00000000 Dynamic value relocation table offset
+                0000 Dynamic value relocation table section
+                0000 Reserved2
+    0000000000000000 Guard RF address of stack pointer verification function pointer
+            00000000 Hot patching table offset
+                0000 Reserved3
+    0000000000000000 Enclave configuration pointer
+    0000000140003600 Volatile metadata pointer
+    0000000000000000 Guard EH continuation table
+                   0 Guard EH continuation count
+    00000001400031B8 Guard XFG address of check-function pointer
+    00000001400031C8 Guard XFG address of dispatch-function pointer
+    00000001400031D0 Guard XFG address of dispatch-table-function pointer
+    00000001400031D8 CastGuard OS determined failure mode
+    00000001400031E0 Guard memcpy function pointer
+
+    Volatile Metadata
+
+                      18 size
+                       3 min version (8003)
+                       3 max version (8003)
+        0000000000003618 volatile access RVA table
+                      10 volatile access RVA table size
+        0000000000003628 volatile range info table
+                      10 volatile range info table size
+
+    Volatile Access RVA Table
+
+          Address
+          --------
+           0000000140001AEF
+           0000000140001B6B
+           0000000140001B80
+           0000000140001BD7
+
+    Volatile Info Range Table
+
+          Ranges
+          -------
+          0000000140001000 - 00000001400019B0
+          00000001400019E0 - 0000000140001DC0
+
+SECTION HEADER #3
+   .data name
+     DBC virtual size
+    4000 virtual address (0000000140004000 to 0000000140004DBB)
+     200 size of raw data
+    2E00 file pointer to raw data (00002E00 to 00002FFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+  .pdata name
+     114 virtual size
+    5000 virtual address (0000000140005000 to 0000000140005113)
+     200 size of raw data
+    3000 file pointer to raw data (00003000 to 000031FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #5
+  .reloc name
+      2C virtual size
+    6000 virtual address (0000000140006000 to 000000014000602B)
+     200 size of raw data
+    3200 file pointer to raw data (00003200 to 000033FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        1000 .rdata
+        1000 .reloc
+        2000 .text

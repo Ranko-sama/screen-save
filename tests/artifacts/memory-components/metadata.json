@@ -1,0 +1,6 @@
+{
+  "measuredAt": "2026-10-08T02:15:50.1613372+08:00",
+  "productionSourceHash": "28095AE0117F991CE6AA202A242E2E1A36A6BB8D2BC6B1AF89C338CE82E6765C",
+  "productionExeHash": "D0659A7385B7510F706894D5AE4A6F2F63D2E1725BD0D1571CFC677E6A78BE21",
+  "scope": "Fresh processes after initialization; six one-second samples per run; three runs per variant. Diagnostic components intentionally absent; no dark-mode operations or working-set trimming. Production process left running."
+}

@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-08T10:50:02.9157774+08:00",
+  "pid": 23440,
+  "path": "C:\\Codex Project\\screen-save\\dist\\ScreenSave.exe",
+  "exeHash": "0697798FDAAF72C928C260E8D5C9BF4EE3E2481FC4C0517E5A2E15D76A99BD0E",
+  "snapshot": {
+    "pid": 23440,
+    "privateResident": 1269760,
+    "privateCommit": 1900544,
+    "workingSet": 11284480,
+    "cpuMs": 46.875,
+    "matrix": 1.0,
+    "gammaWhite": 65535,
+    "execution": 0
+  },
+  "scope": "Release startup only. No display toggle."
+}

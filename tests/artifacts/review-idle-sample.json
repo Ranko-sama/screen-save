@@ -1,0 +1,15 @@
+{
+  "measuredAt": "2026-10-07T23:41:47.4799732+08:00",
+  "pid": 16388,
+  "seconds": 30.0055531,
+  "cpuMilliseconds": 0.0,
+  "cpuPercentOfOneCore": 0.0,
+  "logicalProcessors": 16,
+  "workingSetBytes": 15953920,
+  "privateBytes": 2486272,
+  "handles": 203,
+  "threads": 5,
+  "exeBytes": 104960,
+  "sha256": "A98492F54C9059EBC32E47CD806C482D86ACBD1D34338A3A535DF4902DE977B4",
+  "state": "normal, matrix selected, no keepawake request"
+}

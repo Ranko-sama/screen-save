@@ -1,0 +1,27 @@
+[
+  {
+    "section": ".text",
+    "bytes": 11776,
+    "identical": true
+  },
+  {
+    "section": ".rdata",
+    "bytes": 10752,
+    "identical": false
+  },
+  {
+    "section": ".data",
+    "bytes": 512,
+    "identical": true
+  },
+  {
+    "section": ".pdata",
+    "bytes": 1024,
+    "identical": true
+  },
+  {
+    "section": ".reloc",
+    "bytes": 512,
+    "identical": true
+  }
+]

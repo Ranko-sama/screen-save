@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-10-08T02:32:32.1107652+08:00",
+  "sourceHash": "28095AE0117F991CE6AA202A242E2E1A36A6BB8D2BC6B1AF89C338CE82E6765C",
+  "exeHash": "D0659A7385B7510F706894D5AE4A6F2F63D2E1725BD0D1571CFC677E6A78BE21",
+  "exeBytes": 26112,
+  "entryState": "matrix=0.000 gamma_read=1 gamma_mid=32896 gamma_white=65535 execution=3",
+  "entryBrightness": 0,
+  "gitHead": "e0a08131bc280a7c5df3071cbbd4c7e4ce6ae667"
+}

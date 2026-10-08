@@ -1,0 +1,9 @@
+{
+  "comparedAt": "2026-10-08T10:47:43.0134954+08:00",
+  "ignoredFields": [
+    "COFF TimeDateStamp at file 0xF8",
+    "IMAGE_DEBUG_DIRECTORY TimeDateStamp at file 0x4774"
+  ],
+  "normalizedSha256": "80D2B2C9530E22767C30C1A2F5F38059EE4921B61F67781E5559F68487DD1535",
+  "identicalExceptBuildTimestamps": true
+}

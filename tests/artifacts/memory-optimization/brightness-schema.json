@@ -1,0 +1,27 @@
+[
+  {
+    "Name": "Active",
+    "Type": 1,
+    "Qualifiers": "\r\nName Value CimType                      Flags\r\n---- ----- -------                      -----\r\nread  True Boolean EnableOverride, ToSubclass\r\n\r\n"
+  },
+  {
+    "Name": "CurrentBrightness",
+    "Type": 2,
+    "Qualifiers": "\r\nName      Value CimType                      Flags\r\n----      ----- -------                      -----\r\nread       True Boolean EnableOverride, ToSubclass\r\nWmiDataId     1  SInt32 EnableOverride, Restricted\r\n\r\n"
+  },
+  {
+    "Name": "InstanceName",
+    "Type": 14,
+    "Qualifiers": "\r\nName Value CimType                       Flags\r\n---- ----- -------                       -----\r\nkey   True Boolean DisableOverride, ToSubclass\r\nread  True Boolean  EnableOverride, ToSubclass\r\n\r\n"
+  },
+  {
+    "Name": "Level",
+    "Type": 18,
+    "Qualifiers": "\r\nName       Value CimType                      Flags\r\n----       ----- -------                      -----\r\nread        True Boolean EnableOverride, ToSubclass\r\nWmiDataId      3  SInt32 EnableOverride, Restricted\r\nWmiSizeIs Levels  String EnableOverride, Restricted\r\n\r\n"
+  },
+  {
+    "Name": "Levels",
+    "Type": 6,
+    "Qualifiers": "\r\nName      Value CimType                      Flags\r\n----      ----- -------                      -----\r\nread       True Boolean EnableOverride, ToSubclass\r\nWmiDataId     2  SInt32 EnableOverride, Restricted\r\n\r\n"
+  }
+]

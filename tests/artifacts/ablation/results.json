@@ -1,0 +1,433 @@
+[
+  {
+    "name": "baseline_no_translate",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.39,
+    "bytes": 104960,
+    "sha256": "7C5D39D4CF08E2EAC26DAC5F977FABD78ADDED50831F7208F5A79850D2DB6DF9"
+  },
+  {
+    "name": "baseline_no_inactive_writes",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.39,
+    "bytes": 104960,
+    "sha256": "2CDE1363CC737A0E274BB1FA39321B0B3FCC9A4F9F0B36189D7F82DF05CC828C"
+  },
+  {
+    "name": "baseline_no_mode_power",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.37,
+    "bytes": 104960,
+    "sha256": "FEAB4985EA1784D3FA1350667FB33B43CEB20FC53ACC1E657DC5BE500711F722"
+  },
+  {
+    "name": "baseline_local_tray",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.3,
+    "bytes": 104960,
+    "sha256": "A25320C4F0A53A6BE16A96906BC603839E855F18AFBF1122D0B5BE7A2C20D288"
+  },
+  {
+    "name": "baseline_matrix_bool",
+    "base": "baseline",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.35,
+    "bytes": 104960,
+    "sha256": "94DEBDE7C6DB24800FA78CA003A19164D5DAF68E8F7C787F51A5C300AEC1A7F8"
+  },
+  {
+    "name": "baseline_no_wrapper",
+    "base": "baseline_no_mode_power",
+    "test": "toggle",
+    "expectedFailure": false,
+    "exitCode": 0,
+    "expectationMatched": true,
+    "failedChecks": [],
+    "seconds": 13.33,
+    "bytes": 104960,
+    "sha256": "411DF337AE2F8DFECC0FA230FC2BD6B71134B953C87A95B03C202CFAFCF5FE39"
+  },
+  {
+    "name": "optimized_no_com_blanket",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": null,
+    "exitCode": 1,
+    "expectationMatched": null,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=0 gamma=1 power=0",
+      "FAIL dark_matrix_to_gamma hardware=60 expected=0 matrix=1 gamma=0 power=0",
+      "FAIL reselect_gamma hardware=60 expected=0 matrix=1 gamma=0 power=0",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=0 gamma=1 power=0",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=60 expected=0 matrix=1 gamma=0 power=0",
+      "FAIL new_gamma_session hardware=37 expected=0 matrix=1 gamma=0 power=0",
+      "FAIL gamma_before_exit hardware=37 expected=0 matrix=1 gamma=0 power=0",
+      "FAIL exit_code=3221225477",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=0 gamma=1 power=0",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=0 gamma=1 power=0",
+      "FAIL exit_code=3221225477",
+      "FAIL exit_code=3221225477"
+    ],
+    "seconds": 19.12,
+    "bytes": 104960,
+    "sha256": "E56A2057998D11BF2E7D22B866677CE3115AA9AB95C360B020ADD17BB212ECF6"
+  },
+  {
+    "name": "no_old_output_restore",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=0 power=3",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL gamma_off_restores_session_brightness hardware=60 expected=60 matrix=0 gamma=1 power=0",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL new_session_restores_37_not_startup_60 hardware=37 expected=37 matrix=0 gamma=1 power=0",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=0 gamma=1 power=3"
+    ],
+    "seconds": 13.38,
+    "bytes": 104960,
+    "sha256": "F16FA1F7A41CD60C86DA37AEE573E5445F3328BDE21D93370C0C1EE202D512BA"
+  },
+  {
+    "name": "no_matrix_zero",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=0 gamma=1 power=3",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=0 gamma=1 power=3",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=0 gamma=1 power=3",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=0 gamma=1 power=3"
+    ],
+    "seconds": 13.35,
+    "bytes": 104960,
+    "sha256": "44C7C8D3BCF56BE7B1BFA967CC186D809C901CE6FABE51F4C5F5145F72211927"
+  },
+  {
+    "name": "no_gamma_gain",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=0 power=3"
+    ],
+    "seconds": 13.39,
+    "bytes": 104960,
+    "sha256": "7487829C1945768D8C6A30575D73BC280B91EBB2ECF2EF3DF4254C1ACA309324"
+  },
+  {
+    "name": "no_hardware_write",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_matrix_to_gamma hardware=60 expected=0 matrix=1 gamma=1 power=3",
+      "FAIL reselect_gamma hardware=60 expected=0 matrix=1 gamma=1 power=3",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=60 expected=0 matrix=1 gamma=1 power=3",
+      "FAIL new_gamma_session hardware=37 expected=0 matrix=1 gamma=1 power=3",
+      "FAIL gamma_before_exit hardware=37 expected=0 matrix=1 gamma=1 power=3"
+    ],
+    "seconds": 13.35,
+    "bytes": 104960,
+    "sha256": "BDA7726CAD7A83E49EEDB2B895BBA262DA5F363C48106E8BE8B8683537263C4B"
+  },
+  {
+    "name": "no_brightness_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_gamma_to_matrix hardware=0 expected=60 matrix=1 gamma=1 power=3",
+      "FAIL gamma_off_restores_session_brightness hardware=0 expected=60 matrix=1 gamma=1 power=0",
+      "FAIL new_session_restores_37_not_startup_60 hardware=0 expected=37 matrix=1 gamma=1 power=0",
+      "FAIL exit_from_gamma hardware=0 expected=37 matrix=1 gamma=1 power=0",
+      "FAIL restart_defaults_to_matrix hardware=0 expected=37 matrix=1 gamma=1 power=3"
+    ],
+    "seconds": 13.33,
+    "bytes": 104960,
+    "sha256": "B172BA313831DB7B802541A121ED31D0A14A3AE778E8ABCED76315C4EE9C3FFE"
+  },
+  {
+    "name": "no_matrix_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=0 gamma=1 power=3",
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=0 gamma=1 power=3",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL gamma_off_restores_session_brightness hardware=60 expected=60 matrix=0 gamma=1 power=0",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL new_session_restores_37_not_startup_60 hardware=37 expected=37 matrix=0 gamma=1 power=0",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=0 gamma=1 power=3",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=0 gamma=1 power=3",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=0 gamma=1 power=3"
+    ],
+    "seconds": 13.34,
+    "bytes": 104960,
+    "sha256": "ED001EE00FF48FABF70EB14E47F39336297F65BCD5628890DC681DE0A15C9A0B"
+  },
+  {
+    "name": "no_gamma_snapshot",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=0 power=3",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL gamma_off_restores_session_brightness hardware=60 expected=60 matrix=1 gamma=0 power=0",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL new_session_restores_37_not_startup_60 hardware=37 expected=37 matrix=1 gamma=0 power=0",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=0 power=3",
+      "FAIL exit_from_gamma hardware=37 expected=37 matrix=1 gamma=0 power=0",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=1 gamma=0 power=3",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=0 power=3",
+      "FAIL exit_from_matrix_keeps_hardware hardware=43 expected=43 matrix=1 gamma=0 power=0",
+      "FAIL exit_without_activating hardware=43 expected=43 matrix=1 gamma=0 power=0"
+    ],
+    "seconds": 13.33,
+    "bytes": 104960,
+    "sha256": "5F7CDD55AB2318E2852EBC1ED8119B1C1E67F39C1027674F603223C7441242A4"
+  },
+  {
+    "name": "no_exit_restore",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL exit_from_gamma hardware=0 expected=37 matrix=1 gamma=0 power=0",
+      "FAIL restart_defaults_to_matrix hardware=0 expected=37 matrix=1 gamma=0 power=3",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=0 power=3",
+      "FAIL exit_from_matrix_keeps_hardware hardware=43 expected=43 matrix=1 gamma=0 power=0",
+      "FAIL exit_without_activating hardware=43 expected=43 matrix=1 gamma=0 power=0"
+    ],
+    "seconds": 13.32,
+    "bytes": 104960,
+    "sha256": "4A6232F777C83712E3B855D5F65887FC89A168A71EFA4DDA3C044EF6FD7293DA"
+  },
+  {
+    "name": "no_keepalive",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=1 gamma=1 power=0",
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=1 power=0",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=1 gamma=1 power=0",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=1 power=0"
+    ],
+    "seconds": 13.33,
+    "bytes": 104960,
+    "sha256": "FF370811870C73969AE5F27305364A8A70CF06CF1719304AA640E076C5228A6B"
+  },
+  {
+    "name": "no_continuous",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=1 gamma=1 power=0",
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=1 power=0",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=1 power=0",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=1 gamma=1 power=0",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=1 power=0"
+    ],
+    "seconds": 13.35,
+    "bytes": 104960,
+    "sha256": "FE5C3927CFB556F2BF81B755A6499784369EFE3869B39EC2C6C86AD89C403841"
+  },
+  {
+    "name": "no_display_request",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=1 gamma=1 power=1",
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=1 power=1",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=1 power=1",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=1 power=1",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=1 power=1",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=1 power=1",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=1 power=1",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=1 gamma=1 power=1",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=1 power=1"
+    ],
+    "seconds": 13.36,
+    "bytes": 104960,
+    "sha256": "8605AF63C07AAF6F26D771B0857FAD2881010FBCD2392F9848F18FCA020E617A"
+  },
+  {
+    "name": "no_system_request",
+    "base": "optimized",
+    "test": "toggle",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_no_hardware_change hardware=60 expected=60 matrix=1 gamma=1 power=2",
+      "FAIL dark_matrix_to_gamma hardware=0 expected=0 matrix=1 gamma=1 power=2",
+      "FAIL reselect_gamma hardware=0 expected=0 matrix=1 gamma=1 power=2",
+      "FAIL dark_gamma_to_matrix hardware=60 expected=60 matrix=1 gamma=1 power=2",
+      "FAIL rapid_mode_changes_keep_restore_value hardware=0 expected=0 matrix=1 gamma=1 power=2",
+      "FAIL new_gamma_session hardware=0 expected=0 matrix=1 gamma=1 power=2",
+      "FAIL gamma_before_exit hardware=0 expected=0 matrix=1 gamma=1 power=2",
+      "FAIL restart_defaults_to_matrix hardware=37 expected=37 matrix=1 gamma=1 power=2",
+      "FAIL matrix_leaves_external_hardware_change hardware=43 expected=43 matrix=1 gamma=1 power=2"
+    ],
+    "seconds": 13.33,
+    "bytes": 104960,
+    "sha256": "3E8A7E28256C15AE7AA27BAEAEF896461E0BF539C82C44360940D8BF1EA8F2A2"
+  },
+  {
+    "name": "no_cursor_visibility",
+    "base": "optimized",
+    "test": "cursor",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_on_1 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_off_1 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_on_2 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_off_2 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_on_3 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_off_3 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_on_for_switch position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_to_gamma position_unchanged=1 foreground_unchanged=1",
+      "FAIL gamma_to_matrix position_unchanged=1 foreground_unchanged=1",
+      "FAIL exit_from_matrix position_unchanged=1 foreground_unchanged=1"
+    ],
+    "seconds": 8.11,
+    "bytes": 105472,
+    "sha256": "AA07C3D218FE6EA5154CA7FC7EB17E5EE870BFB513A99ED19BF7745922BC03D6"
+  },
+  {
+    "name": "no_cursor_refresh",
+    "base": "optimized",
+    "test": "cursor",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL matrix_off_1 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_off_2 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_off_3 position_unchanged=1 foreground_unchanged=1",
+      "FAIL matrix_to_gamma position_unchanged=1 foreground_unchanged=1",
+      "FAIL exit_from_matrix position_unchanged=1 foreground_unchanged=1"
+    ],
+    "seconds": 8.14,
+    "bytes": 104960,
+    "sha256": "CFCC9E9DB8D6D90FFF1FBD92414C103D7FD4B8FAA4197CF3E4AE5BAE36B43887"
+  },
+  {
+    "name": "no_single_owner",
+    "base": "optimized",
+    "test": "review",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL second_instance_exits",
+      "FAIL second_instance_exits",
+      "FAIL second_instance_exits",
+      "FAIL no_instance_without_restore_hotkey"
+    ],
+    "seconds": 34.85,
+    "bytes": 104960,
+    "sha256": "7DCD44FCB450654B5DB717D10CCDC9C648A705F60178569478C2087F6C008154"
+  },
+  {
+    "name": "old_handoff_order",
+    "base": "optimized",
+    "test": "review",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL dark_handoff_has_no_full_color_gap"
+    ],
+    "seconds": 27.61,
+    "bytes": 104960,
+    "sha256": "77410E6F1F410097E978C16C1C4114B6254BD52D3E093EAA88011FBCA7012A1F"
+  },
+  {
+    "name": "no_focus_guard",
+    "base": "optimized",
+    "test": "menu",
+    "expectedFailure": true,
+    "exitCode": 1,
+    "expectationMatched": true,
+    "failedChecks": [
+      "FAIL cancel_does_not_steal_new_focus"
+    ],
+    "seconds": 7.39,
+    "bytes": 104960,
+    "sha256": "5ADCB158B10BB144679A5817ECEE29ED2003B652B9320AC0FB4C720557AB47DB"
+  }
+]

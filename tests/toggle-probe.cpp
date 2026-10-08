@@ -1,5 +1,6 @@
 // Developer integration test for the separate, compiled application.
-#include "../screen-save.cpp"
+// Keep the COM observer independent of the application's native WMI implementation.
+#include "artifacts/memory-optimization/baseline.cpp"
 #include <powrprof.h>
 #include <cstdio>
 #include <cstring>
@@ -143,6 +144,10 @@ int wmain(int argc, wchar_t** argv) {
     SetBrightness(baseline.brightness);
     MagSetFullscreenColorEffect(&baseline.colors);
     SetDeviceGammaRamp(display, baseline.gamma);
+    MagShowSystemCursor(TRUE);
+    POINT restoredCursor;
+    GetPhysicalCursorPos(&restoredCursor);
+    SetPhysicalCursorPos(restoredCursor.x, restoredCursor.y);
     Sleep(650);
     Check("test_cleanup", baseline.brightness, false, false, false);
     printf("FAILURES=%d\n", failures);

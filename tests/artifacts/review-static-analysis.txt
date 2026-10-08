@@ -1,0 +1,6 @@
+screen-save.cpp
+C:\Codex Project\screen-save\screen-save.cpp(34) : warning C6031: 返回值被忽略: “CoInitializeEx”。
+C:\Codex Project\screen-save\screen-save.cpp(36) : warning C6031: 返回值被忽略: “CoCreateInstance”。
+C:\Codex Project\screen-save\screen-save.cpp(42) : warning C6031: 返回值被忽略: “CoSetProxyBlanket”。
+C:\Codex Project\screen-save\screen-save.cpp(55) : warning C6001: 使用未初始化的内存“definition”。: Lines: 34, 35, 36, 38, 39, 40, 41, 42, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 55
+C:\Codex Project\screen-save\screen-save.cpp(181) : warning C28251: “wWinMain”的批注不一致: 此实例包含 无批注。请参见 c:\program files (x86)\windows kits\10\include\10.0.26100.0\um\winbase.h(1075)。

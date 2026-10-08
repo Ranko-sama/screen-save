@@ -1,4 +1,5 @@
-#include "../screen-save.cpp"
+// Historical COM/WMI experiment, pinned to the implementation it measured.
+#include "artifacts/memory-optimization/baseline.cpp"
 #include <cstdio>
 int main() {
     OpenBrightness();

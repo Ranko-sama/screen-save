@@ -1,0 +1,319 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file dist\ScreenSave.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+            8664 machine (x64)
+               5 number of sections
+        6AC702AC time date stamp Thu Oct  8 10:40:44 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              F0 size of optional header
+              22 characteristics
+                   Executable
+                   Application can handle large (>2GB) addresses
+
+OPTIONAL HEADER VALUES
+             20B magic # (PE32+)
+           14.44 linker version
+            2E00 size of code
+            4000 size of initialized data
+               0 size of uninitialized data
+            1E38 entry point (0000000140001E38)
+            1000 base of code
+       140000000 image base (0000000140000000 to 0000000140009FFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            0.00 image version
+            6.00 subsystem version
+               0 Win32 version
+            A000 size of image
+             400 size of headers
+               0 checksum
+               2 subsystem (Windows GUI)
+            8160 DLL characteristics
+                   High Entropy Virtual Addresses
+                   Dynamic base
+                   NX compatible
+                   Terminal Server Aware
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+               0 [       0] RVA [size] of Export Directory
+            5CF8 [      F0] RVA [size] of Import Directory
+               0 [       0] RVA [size] of Resource Directory
+            8000 [     348] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+            9000 [     124] RVA [size] of Base Relocation Directory
+            5570 [      1C] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+               0 [       0] RVA [size] of Thread Storage Directory
+            5430 [     140] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+            4000 [     310] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+    2D70 virtual size
+    1000 virtual address (0000000140001000 to 0000000140003D6F)
+    2E00 size of raw data
+     400 file pointer to raw data (00000400 to 000031FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+    2874 virtual size
+    4000 virtual address (0000000140004000 to 0000000140006873)
+    2A00 size of raw data
+    3200 file pointer to raw data (00003200 to 00005BFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6AC702AC coffgrp      284 000057C8     49C8    4C544347 (LTCG)
+
+  Section contains the following imports:
+
+    api-ms-win-crt-string-l1-1-0.dll
+             1400042F8 Import Address Table
+             1400060E0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          A6 wcsncmp
+                          A1 wcscpy_s
+
+    USER32.dll
+             140004150 Import Address Table
+             140005F38 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         193 GetMessageW
+                          AB DefWindowProcW
+                         3DF UnregisterHotKey
+                         19B GetPhysicalCursorPos
+                          B9 DestroyWindow
+                         14B GetDC
+                          7A CreateWindowExW
+                         32D SendMessageW
+                          45 CheckMenuRadioItem
+                         14A GetCursorPos
+                         311 ReleaseDC
+                         350 SetForegroundWindow
+                         2EF RegisterClassW
+                         368 SetPhysicalCursorPos
+                         2BD PostQuitMessage
+                          C1 DispatchMessageW
+                         269 LoadIconW
+                          B6 DestroyMenu
+                         3CC TrackPopupMenu
+                          75 CreatePopupMenu
+                         162 GetForegroundWindow
+                         2FB RegisterHotKey
+                           C AppendMenuW
+
+    GDI32.dll
+             140004000 Import Address Table
+             140005DE8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         293 GetDeviceGammaRamp
+                         38F SetDeviceGammaRamp
+
+    SHELL32.dll
+             140004140 Import Address Table
+             140005F28 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1BC Shell_NotifyIconW
+
+    MAGNIFICATION.dll
+             140004110 Import Address Table
+             140005EF8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           1 MagGetFullscreenColorEffect
+                           8 MagInitialize
+                          13 MagShowSystemCursor
+                          14 MagUninitialize
+                           A MagSetFullscreenColorEffect
+
+    KERNEL32.dll
+             140004018 Import Address Table
+             140005E00 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         517 RtlUnwindEx
+                         578 SetLastError
+                         12F DeleteCriticalSection
+                         396 InitializeCriticalSectionAndSpinCount
+                         5EA TlsAlloc
+                         5EC TlsGetValue
+                         5EB TlsFree
+                         2A5 GetModuleHandleW
+                         301 GetStartupInfoW
+                         3B0 IsDebuggerPresent
+                         39A InitializeSListHead
+                         31A GetSystemTimeAsFileTime
+                         246 GetCurrentThreadId
+                         242 GetCurrentProcessId
+                         481 QueryPerformanceCounter
+                         3B8 IsProcessorFeaturePresent
+                         5D8 TerminateProcess
+                         3F6 LoadLibraryExW
+                         5EE TlsSetValue
+                         241 GetCurrentProcess
+                         5B8 SetUnhandledExceptionFilter
+                         5FB UnhandledExceptionFilter
+                         518 RtlVirtualUnwind
+                         511 RtlLookupFunctionEntry
+                         509 RtlCaptureContext
+                         1D4 FreeLibrary
+                         5A0 SetThreadExecutionState
+                         3F7 LoadLibraryW
+                         2DD GetProcAddress
+                         28D GetLastError
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             140004250 Import Address Table
+             140006038 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          54 abort
+                          3C _register_onexit_function
+                          34 _initialize_onexit_table
+                          15 _c_exit
+                          16 _cexit
+                          23 _exit
+                          55 exit
+                          37 _initterm_e
+                          36 _initterm
+                          67 terminate
+                          2F _get_wide_winmain_command_line
+                          3D _register_thread_local_exe_atexit_callback
+                          35 _initialize_wide_environment
+                          19 _configure_wide_argv
+                          1E _crt_atexit
+                          42 _set_app_type
+                          40 _seh_filter_exe
+
+    api-ms-win-crt-math-l1-1-0.dll
+             140004240 Import Address Table
+             140006028 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           9 __setusermatherr
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             1400042E0 Import Address Table
+             1400060C8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           1 __p__commode
+                          54 _set_fmode
+
+    api-ms-win-crt-locale-l1-1-0.dll
+             140004230 Import Address Table
+             140006018 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           8 _configthreadlocale
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             140004210 Import Address Table
+             140005FF8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          17 calloc
+                          18 free
+                          16 _set_new_mode
+
+SECTION HEADER #3
+   .data name
+     F60 virtual size
+    7000 virtual address (0000000140007000 to 0000000140007F5F)
+     200 size of raw data
+    5C00 file pointer to raw data (00005C00 to 00005DFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+  .pdata name
+     348 virtual size
+    8000 virtual address (0000000140008000 to 0000000140008347)
+     400 size of raw data
+    5E00 file pointer to raw data (00005E00 to 000061FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #5
+  .reloc name
+     124 virtual size
+    9000 virtual address (0000000140009000 to 0000000140009123)
+     200 size of raw data
+    6200 file pointer to raw data (00006200 to 000063FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        3000 .rdata
+        1000 .reloc
+        3000 .text
