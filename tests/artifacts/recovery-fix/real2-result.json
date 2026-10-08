@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-08",
+  "status": "completed_real_agent_attempt_no_stale_position_rollback_reproduced",
+  "processId": 29556,
+  "sourceUnchanged": true,
+  "exeUnchanged": true,
+  "darkRestoreCycles": 2,
+  "darkMatrixCoefficients": [
+    0.0,
+    0.0
+  ],
+  "allSnapshotsSameProcess": true,
+  "fullMatricesRestored": true,
+  "fullGammaTablesRestored": true,
+  "executionStates": [
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "nativeClicks": 2,
+  "nativeCompletedDrags": 2,
+  "browserClicks": {
+    "left": 1,
+    "right": 2
+  },
+  "browserAllEventsTrusted": true,
+  "cycle1MouseUpTick": 19867406,
+  "cycle1RestoreBDownTick": 19867453,
+  "cycle1GapMs": 47,
+  "cycle2MouseUpTick": 19969421,
+  "cycle2RestoreBDownTick": 19969453,
+  "cycle2GapMs": 32,
+  "nativeInputOverlapObserved": false,
+  "raceWindowHitDemonstrated": false,
+  "endpointBeforeRestoration": [
+    811,
+    499
+  ],
+  "endpointAfterRestoration": [
+    812,
+    500
+  ],
+  "endpointDelta": [
+    1,
+    1
+  ],
+  "endpointDeltaSeenInBothCycles": true,
+  "endpointDeltaCause": "Undetermined. The native target calls SetProcessDPIAware and the observer does not; effective DPI contexts were not recorded. Do not directly subtract coordinates from the two processes. The reported +1,+1 uses only the native target readings.",
+  "observedWrongClicks": 0,
+  "observedReturnToDragStart": 0,
+  "limitation": "In these two attempts, delivered native mouse and restore-key actions did not overlap. Internal tool serialization was not established. This does not prove safety under read/write interleaving or estimate its frequency."
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Screen Save Cursor Reproduction</title>
+<style>
+body{font:20px system-ui;margin:32px;background:#eef2f6;color:#142638}
+button{width:260px;height:130px;margin:20px;border:3px solid #164e80;font:24px system-ui}
+#out{white-space:pre-wrap;font:14px monospace;height:180px;overflow:auto}
+#pad{height:100px;background:#ccdbea;margin:20px;touch-action:none;user-select:none}
+</style>
+<h1>Screen Save 光标真实操作测试</h1>
+<p>仅记录本页鼠标事件。无外部请求、无持续动画。</p>
+<button id="left">左侧目标 A</button><button id="right">右侧目标 B</button>
+<div id="pad">拖动测试区</div>
+<pre id="out">尚无事件</pre>
+<script>
+const events = [], clicks = {left:0,right:0};
+function record(e) {
+  events.push({t:performance.now(),type:e.type,id:e.target.id,x:e.clientX,y:e.clientY,
+    sx:e.screenX,sy:e.screenY,buttons:e.buttons,trusted:e.isTrusted,key:e.key});
+  if(e.type==='click' && e.target.id in clicks) clicks[e.target.id]++;
+  document.querySelector('#out').textContent=JSON.stringify({clicks,events},null,2);
+}
+for(const type of ['pointermove','pointerdown','pointerup','click','keydown','keyup'])
+  document.addEventListener(type,record);
+</script>

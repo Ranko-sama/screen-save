@@ -1,0 +1,13 @@
+FAIL cancelled_session_changes_nothing
+FAIL cancelled_session_changes_nothing
+FAIL cancelled_session_changes_nothing
+FAIL cancelled_session_changes_nothing
+FAIL dark_full_state
+FAIL dark_full_state
+FAIL toggle_restores_after_cancel_and_handoffs
+FAIL next_session_uses_fresh_external_snapshot
+FAIL dark_full_state
+FAIL dark_full_state
+FAIL toggle_restores_after_cancel_and_handoffs
+FAIL next_session_uses_fresh_external_snapshot
+CHECKS=84 FAILURES=12

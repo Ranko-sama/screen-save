@@ -1,0 +1,18 @@
+[
+  {
+    "action": "drag_start",
+    "ms": 0
+  },
+  {
+    "action": "drag_return",
+    "ms": 97
+  },
+  {
+    "action": "restore_request",
+    "ms": 107
+  },
+  {
+    "action": "restore_return",
+    "ms": 151
+  }
+]

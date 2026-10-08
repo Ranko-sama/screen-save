@@ -17,13 +17,13 @@ int brightnessBeforeDark;
 // Native WMI exports are resolved locally; this is not a portable brightness API.
 HMODULE brightnessLibrary;
 HANDLE brightnessDataBlock, brightnessMethodBlock;
-ULONG (WINAPI* nativeOpen)(GUID*, ULONG, HANDLE*);
 ULONG (WINAPI* nativeQuery)(HANDLE, ULONG*, void*);
 ULONG (WINAPI* nativeClose)(HANDLE);
 ULONG (WINAPI* nativeExecute)(HANDLE, const wchar_t*, ULONG, ULONG, void*, ULONG*, void*);
 wchar_t brightnessInstance[128];
 
 void OpenBrightness() {
+    ULONG (WINAPI* nativeOpen)(GUID*, ULONG, HANDLE*);
     brightnessLibrary = LoadLibraryW(L"advapi32.dll");
     nativeOpen = reinterpret_cast<decltype(nativeOpen)>(GetProcAddress(brightnessLibrary, "WmiOpenBlock"));
     nativeQuery = reinterpret_cast<decltype(nativeQuery)>(GetProcAddress(brightnessLibrary, "WmiQueryAllDataW"));
@@ -59,21 +59,15 @@ void SetBrightness(int brightness) {
         sizeof(parameters), parameters, &resultBytes, &result);
 }
 
-void CloseBrightness() {
-    nativeClose(brightnessMethodBlock);
-    nativeClose(brightnessDataBlock);
-    FreeLibrary(brightnessLibrary);
-}
-
 void ApplyOutput(DimmingMode mode, bool dark) {
     if (mode == DimmingMode::Gamma) {
         WORD ramp[3][256];
         // The 0.5 scale was verified on this laptop; keep the original curve.
-        for (int channel = 0; channel < 3; ++channel)
-            for (int entry = 0; entry < 256; ++entry)
-                ramp[channel][entry] = static_cast<WORD>(
-                    originalGamma[channel][entry] / (dark ? 2 : 1));
-        SetDeviceGammaRamp(display, ramp);
+        if (dark)
+            for (int channel = 0; channel < 3; ++channel)
+                for (int entry = 0; entry < 256; ++entry)
+                    ramp[channel][entry] = originalGamma[channel][entry] / 2;
+        SetDeviceGammaRamp(display, dark ? ramp : originalGamma);
     } else {
         auto colors = originalColors;
         if (dark)
@@ -149,6 +143,11 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) 
         if (LOWORD(w) == 4) SelectMode(DimmingMode::Gamma);
         return 0;
     }
+    if (message == WM_ENDSESSION) {
+        // Windows may terminate us as soon as this callback returns.
+        if (w && isDark) ToggleBlack();
+        return 0;
+    }
     if (message == WM_CLOSE) {
         PostQuitMessage(0);
         return 0;
@@ -157,6 +156,8 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM w, LPARAM l) 
 }
 
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
+    // This hidden window has no text input; disable IME for this thread only.
+    ImmDisableIME(GetCurrentThreadId());
     WNDCLASSW cls{};
     cls.hInstance = instance;
     cls.lpfnWndProc = WindowProcedure;
@@ -190,7 +191,9 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     Shell_NotifyIconW(NIM_DELETE, &tray);
     MagUninitialize();
     ReleaseDC(nullptr, display);
-    CloseBrightness();
+    nativeClose(brightnessMethodBlock);
+    nativeClose(brightnessDataBlock);
+    FreeLibrary(brightnessLibrary);
     UnregisterHotKey(window, 3);
     DestroyWindow(window);
     return 0;

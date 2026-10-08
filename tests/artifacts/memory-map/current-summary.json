@@ -1,0 +1,53 @@
+{
+  "recordedAt": "2026-10-08T11:29:26.7493070+08:00",
+  "processStartedAt": "2026-10-08T10:59:24.9484771+08:00",
+  "releaseHash": "0697798FDAAF72C928C260E8D5C9BF4EE3E2481FC4C0517E5A2E15D76A99BD0E",
+  "gitCommit": "cf1cfaf7a13d129472a77a54d98dae3073501626",
+  "groups": [
+    {
+      "kind": "heap_root_allocation",
+      "allocations": 1,
+      "privateResidentKiB": 424.0,
+      "committedKiB": 460.0,
+      "residentKiB": 424.0
+    },
+    {
+      "kind": "image",
+      "allocations": 44,
+      "privateResidentKiB": 1080.0,
+      "committedKiB": 59364.0,
+      "residentKiB": 17476.0
+    },
+    {
+      "kind": "mapped",
+      "allocations": 26,
+      "privateResidentKiB": 0.0,
+      "committedKiB": 28800.0,
+      "residentKiB": 880.0
+    },
+    {
+      "kind": "private_unattributed",
+      "allocations": 16,
+      "privateResidentKiB": 148.0,
+      "committedKiB": 164.0,
+      "residentKiB": 156.0
+    },
+    {
+      "kind": "teb_allocation",
+      "allocations": 1,
+      "privateResidentKiB": 12.0,
+      "committedKiB": 12.0,
+      "residentKiB": 12.0
+    },
+    {
+      "kind": "thread_stack",
+      "allocations": 1,
+      "privateResidentKiB": 24.0,
+      "committedKiB": 36.0,
+      "residentKiB": 24.0
+    }
+  ],
+  "privateResidentSum": 1728512.0,
+  "residentSum": 19427328.0,
+  "scope": "Single external memory map. Residency captured before reading PEB/TEB metadata. No writes, injection, display switching, or target suspension."
+}

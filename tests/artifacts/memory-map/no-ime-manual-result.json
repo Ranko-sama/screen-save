@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-08T12:23:33.1194928+08:00",
+  "userReport": "操作完成",
+  "state": {
+    "pid": 28096,
+    "privateResident": 1613824,
+    "privateCommit": 2658304,
+    "workingSet": 15872000,
+    "cpuMs": 140.625,
+    "matrix": 1.0,
+    "gammaWhite": 65535,
+    "execution": 0
+  },
+  "hardwareBrightness": 100,
+  "candidateHash": "47DAD63BB77870830F23DE4121A72DE298CAFE192F33FB72C625DDC8896C7537"
+}

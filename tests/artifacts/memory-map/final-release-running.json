@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-08T12:28:39.1603004+08:00",
+  "pid": 28208,
+  "path": "C:\\Codex Project\\screen-save\\dist\\ScreenSave.exe",
+  "exeHash": "FDC5EE5EF067CFF420A5A2D33E4DEF02C8C871864A1F50A709E48EC57720AEE0",
+  "state": {
+    "pid": 28208,
+    "privateResident": 1257472,
+    "privateCommit": 1880064,
+    "workingSet": 10903552,
+    "cpuMs": 46.875,
+    "matrix": 1.0,
+    "gammaWhite": 65535,
+    "execution": 0
+  },
+  "scope": "Normal replacement of the test copy by the compiled release; no display toggle."
+}

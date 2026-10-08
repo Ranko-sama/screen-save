@@ -13,9 +13,13 @@
 
 暗屏期间阻止自动息屏和睡眠，恢复后释放保活请求。每次进入暗屏时保存恢复状态，通过“退出”结束时也会还原；若正在使用 Gamma 暗屏，同时还原系统亮度。未开启暗屏时切换模式不会改变显示。
 
+收到 Windows 确认注销、关机或重启的会话结束通知时，在通知返回前执行同一恢复逻辑；取消结束会话则保持当前状态。
+
 重复启动时，新进程直接退出；Ctrl+Alt+B 已被其他程序占用时，本程序也不启动。
 
 程序不联网，没有配置文件、日志、设置界面或自动启动。只需分发 `dist/ScreenSave.exe`；`tests/`、`build/` 和本地测试页面属于开发工具。
+
+程序自身没有文本输入框，因此关闭本线程的输入法支持，避免加载部分输入组件；其他软件的中文输入不受影响。
 
 ## 编译
 
@@ -24,6 +28,14 @@
 硬件亮度通过系统 `advapi32.dll` 的原生 WMI 导出调用，减少本进程中 COM/WMI 对象的开销。这条调用路径未列入当前 SDK 的公开接口，仅在本机验证；系统 DLL 自带并不意味着其他电脑或未来系统版本必然兼容。
 
 ## 验证
+
+最新的真实 Computer Use / 内置 Browser Use 复现尝试见 [tests/REAL-CURSOR-RESULTS.md](tests/REAL-CURSOR-RESULTS.md)：两轮未复现并发旧坐标覆盖或误点击，但工具实际将拖动与恢复排成先后顺序，未命中竞争窗口；另观察到恢复时各轴增加 1 像素，原因未定位。
+
+会话结束恢复修复、回归和消融结果见 [tests/RECOVERY-FIX.md](tests/RECOVERY-FIX.md)。颜色矩阵恢复光标使用“读取并回写当前位置”：本机静止光标能立即恢复；特定并发交错可能覆盖新位置，但尚未观察到本机 agent 因此回跳或误点击。两个无坐标回写候选均未通过实体光标测试，当前保留有效实现并记录该条件性风险。
+
+最新结构消融的三项精简、编译对照和收益边界见 [tests/STRUCTURE-ABLATION.md](tests/STRUCTURE-ABLATION.md)。本轮没有自动反复切换屏幕。
+
+私有内存组成、输入组件优化与低频验证见 [tests/MEMORY-ATTRIBUTION.md](tests/MEMORY-ATTRIBUTION.md)。
 
 本轮内存优化的保留项、舍弃项、手动测试与测量限制见 [tests/MEMORY-OPTIMIZATION.md](tests/MEMORY-OPTIMIZATION.md)。
 

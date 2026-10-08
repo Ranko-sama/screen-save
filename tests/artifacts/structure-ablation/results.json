@@ -1,0 +1,290 @@
+[
+  {
+    "variant": "baseline",
+    "sourceSha256": "4EEB70910320B2D11512F8CF21727B6161366850278E846938851471FFE4D19C",
+    "sourceLines": 199,
+    "identicalToBaselineExceptTimestamps": true,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "B094BA3A404BB246E6586B2F983F82F941437F2D8C0BFB007F546BE046969DA5",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11648,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10422,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3936,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 840,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  },
+  {
+    "variant": "local_open",
+    "sourceSha256": "4FFD8582F8B31DD24F99E42F68213A3916ED565D30A490128D20D7B09853F98E",
+    "sourceLines": 199,
+    "identicalToBaselineExceptTimestamps": false,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "ADA11D698BD6B64A1974A8674EF59C4A2C81C7C3DF44012E1D4FA2A4A352D78C",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11632,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10422,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3928,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 840,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  },
+  {
+    "variant": "inline_close",
+    "sourceSha256": "14A561C24BC93779A23D1057AB5DFB7AAA11826F99BB64F095715526423FACDE",
+    "sourceLines": 195,
+    "identicalToBaselineExceptTimestamps": true,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "B094BA3A404BB246E6586B2F983F82F941437F2D8C0BFB007F546BE046969DA5",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11648,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10422,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3936,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 840,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  },
+  {
+    "variant": "direct_gamma_restore",
+    "sourceSha256": "6BDBA292354C191E1F9C080523A145B27E52B3E21DE4741A0314DB52AF26A3FC",
+    "sourceLines": 199,
+    "identicalToBaselineExceptTimestamps": false,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "C8CE496F1427EE32CD2FFE6DABB3E356BF68E87B2A12EC3FBB6DC60EA8A74250",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11648,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10422,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3936,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 840,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  },
+  {
+    "variant": "inline_open",
+    "sourceSha256": "2F953ADD4EBD584846EA86D8BB4133F063584EC3E2A7B4260AADE7E5ADB42408",
+    "sourceLines": 195,
+    "identicalToBaselineExceptTimestamps": false,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "9F375B402D82DB407F0B28FEB26264A27727E284B66B61E0DA31823B205324A9",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11584,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10406,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3936,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 828,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  },
+  {
+    "variant": "optimized",
+    "sourceSha256": "8073787BA5AD43B8A22968D8BFBF3138D831950A048501CA2DCA075D875B1194",
+    "sourceLines": 195,
+    "identicalToBaselineExceptTimestamps": false,
+    "pe": {
+      "exeBytes": 25600,
+      "normalizedSha256": "B5D0771EEBA125A7D9CE676357DCAD24DEE0648646AED402406038DCDF8E47C4",
+      "imageBytes": 40960,
+      "sections": [
+        {
+          "name": ".text",
+          "virtualBytes": 11632,
+          "rva": 4096,
+          "rawBytes": 11776,
+          "rawOffset": 1024
+        },
+        {
+          "name": ".rdata",
+          "virtualBytes": 10422,
+          "rva": 16384,
+          "rawBytes": 10752,
+          "rawOffset": 12800
+        },
+        {
+          "name": ".data",
+          "virtualBytes": 3928,
+          "rva": 28672,
+          "rawBytes": 512,
+          "rawOffset": 23552
+        },
+        {
+          "name": ".pdata",
+          "virtualBytes": 840,
+          "rva": 32768,
+          "rawBytes": 1024,
+          "rawOffset": 24064
+        },
+        {
+          "name": ".reloc",
+          "virtualBytes": 292,
+          "rva": 36864,
+          "rawBytes": 512,
+          "rawOffset": 25088
+        }
+      ]
+    }
+  }
+]

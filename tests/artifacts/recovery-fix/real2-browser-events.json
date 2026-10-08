@@ -1,0 +1,140 @@
+{
+  "clicks": {
+    "left": 1,
+    "right": 2
+  },
+  "events": [
+    {
+      "t": 64568.900000002235,
+      "type": "pointermove",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 64582.5,
+      "type": "pointerdown",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 1,
+      "trusted": true
+    },
+    {
+      "t": 64584.60000000149,
+      "type": "pointerup",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 64584.900000002235,
+      "type": "click",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 172243.90000000224,
+      "type": "pointermove",
+      "id": "left",
+      "x": 182,
+      "y": 240,
+      "sx": 842,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 172251.1000000015,
+      "type": "pointerdown",
+      "id": "left",
+      "x": 182,
+      "y": 240,
+      "sx": 842,
+      "sy": 384,
+      "buttons": 1,
+      "trusted": true
+    },
+    {
+      "t": 172252.90000000224,
+      "type": "pointerup",
+      "id": "left",
+      "x": 182,
+      "y": 240,
+      "sx": 842,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 172253,
+      "type": "click",
+      "id": "left",
+      "x": 182,
+      "y": 240,
+      "sx": 842,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 256885.6000000015,
+      "type": "pointermove",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 256893.20000000298,
+      "type": "pointerdown",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 1,
+      "trusted": true
+    },
+    {
+      "t": 256895.30000000075,
+      "type": "pointerup",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    },
+    {
+      "t": 256895.40000000224,
+      "type": "click",
+      "id": "right",
+      "x": 482,
+      "y": 240,
+      "sx": 1142,
+      "sy": 384,
+      "buttons": 0,
+      "trusted": true
+    }
+  ]
+}

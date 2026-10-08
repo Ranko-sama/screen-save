@@ -5,6 +5,11 @@
 #include <powrprof.h>
 #include <cstdio>
 
+void PrintBytes(const void* data, size_t size) {
+    auto bytes = static_cast<const unsigned char*>(data);
+    for (size_t i = 0; i < size; ++i) printf("%02x", bytes[i]);
+}
+
 int main() {
     HWND window = FindWindowW(L"ScreenSave", L"Screen Save");
     DWORD pid = 0;
@@ -20,17 +25,22 @@ int main() {
     ULARGE_INTEGER u{{user.dwLowDateTime, user.dwHighDateTime}};
     MAGCOLOREFFECT colors{};
     MagInitialize();
-    MagGetFullscreenColorEffect(&colors);
+    BOOL colorsRead = MagGetFullscreenColorEffect(&colors);
     MagUninitialize();
     HDC dc = GetDC(nullptr);
     WORD gamma[3][256]{};
-    GetDeviceGammaRamp(dc, gamma);
+    BOOL gammaRead = GetDeviceGammaRamp(dc, gamma);
     ReleaseDC(nullptr, dc);
+    if (!colorsRead || !gammaRead) return 4;
     EXECUTION_STATE flags{};
     CallNtPowerInformation(SystemExecutionState, nullptr, 0, &flags, sizeof(flags));
-    printf("{\"pid\":%lu,\"privateResident\":%llu,\"privateCommit\":%llu,\"workingSet\":%llu,\"cpuMs\":%.4f,\"matrix\":%.3f,\"gammaWhite\":%u,\"execution\":%lu}\n",
+    printf("{\"pid\":%lu,\"privateResident\":%llu,\"privateCommit\":%llu,\"workingSet\":%llu,\"cpuMs\":%.4f,\"matrix\":%.3f,\"gammaWhite\":%u,\"execution\":%lu,\"colorsHex\":\"",
         pid, static_cast<unsigned long long>(memory.PrivateWorkingSetSize),
         static_cast<unsigned long long>(memory.PrivateUsage), static_cast<unsigned long long>(memory.WorkingSetSize),
         (k.QuadPart + u.QuadPart) / 10000.0, colors.transform[0][0], gamma[0][255], flags);
+    PrintBytes(&colors, sizeof(colors));
+    printf("\",\"gammaHex\":\"");
+    PrintBytes(gamma, sizeof(gamma));
+    printf("\"}\n");
     CloseHandle(process);
 }

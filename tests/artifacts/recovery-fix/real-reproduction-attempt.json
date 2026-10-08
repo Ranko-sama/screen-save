@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-08T14:40:21.1418850+08:00",
+  "purpose": "Reproduce cursor rollback with the unchanged release and real Computer Use / Browser Use",
+  "status": "blocked_before_input",
+  "computerUse": "Initialization failed; one reset and retry failed",
+  "browserUse": "Initialization failed; one reset and retry failed",
+  "error": "windows sandbox failed: helper_unknown_error: setup refresh had errors",
+  "screenToggleCount": 0,
+  "realMouseActions": 0,
+  "productChanged": false,
+  "conclusion": "No real reproduction result; model evidence unchanged"
+}

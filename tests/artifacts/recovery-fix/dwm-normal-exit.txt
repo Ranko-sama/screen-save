@@ -1,0 +1,2 @@
+exit_code=0
+matrix=1.000 gamma_read=1 gamma_mid=32896 gamma_white=65535 execution=2

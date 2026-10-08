@@ -1,0 +1,7 @@
+FAIL confirmed_session_restores_before_return
+FAIL confirmed_session_restores_before_return
+FAIL confirmed_session_restores_before_return
+FAIL confirmed_session_restores_before_return
+FAIL next_session_uses_fresh_external_snapshot
+FAIL next_session_uses_fresh_external_snapshot
+CHECKS=95 FAILURES=6

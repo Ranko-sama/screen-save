@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-08T14:47:38.9695358+08:00",
+  "status": "stopped_before_input_by_computer_use_policy",
+  "reason": "Computer Use could not determine the current browser URL on Windows with enough confidence to enforce policy",
+  "productChanged": false,
+  "screenToggleCount": 0,
+  "computerUseMouseActions": 0,
+  "browserUseClicks": 0,
+  "browserUse": "Opened local test page only",
+  "observer": "Stopped without issuing input",
+  "conclusion": "No real reproduction result; no evidence that the risk occurred in real agent operation"
+}

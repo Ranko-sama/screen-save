@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-08T12:26:13.0518357+08:00",
+  "pid": 28096,
+  "secondsSinceUseSnapshot": 159.9323429,
+  "snapshot": {
+    "pid": 28096,
+    "privateResident": 1531904,
+    "privateCommit": 2531328,
+    "workingSet": 15794176,
+    "cpuMs": 140.625,
+    "matrix": 1.0,
+    "gammaWhite": 65535,
+    "execution": 0
+  },
+  "threadCount": 1,
+  "cpuDeltaMs": 0.0,
+  "privateResidentDelta": -81920,
+  "scope": "One idle resource read after the manual cycle; no additional display changes."
+}

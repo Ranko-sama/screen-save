@@ -1,0 +1,20 @@
+{
+  "baselinePrivateKiB": 1720,
+  "candidatePrivateKiB": 1576,
+  "baselineCommitKiB": 2736,
+  "candidateCommitKiB": 2596,
+  "removedModules": [
+    "ScreenSave.exe",
+    "oleacc.dll",
+    "TextInputFramework.dll",
+    "CoreUIComponents.dll",
+    "WinTypes.dll",
+    "CoreMessaging.dll",
+    "cryptbase.dll",
+    "ole32.dll"
+  ],
+  "addedModules": [
+    "no-ime.exe",
+    "apphelp.dll"
+  ]
+}

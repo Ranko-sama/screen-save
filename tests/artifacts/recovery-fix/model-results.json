@@ -1,0 +1,51 @@
+[
+  {
+    "variant": "baseline",
+    "exitCode": 1,
+    "expectedPass": false,
+    "asExpected": true,
+    "summary": "CHECKS=87 FAILURES=7"
+  },
+  {
+    "variant": "session_only",
+    "exitCode": 1,
+    "expectedPass": false,
+    "asExpected": true,
+    "summary": "CHECKS=90 FAILURES=1"
+  },
+  {
+    "variant": "cursor_candidate",
+    "exitCode": 0,
+    "expectedPass": true,
+    "asExpected": true,
+    "summary": "CHECKS=104 FAILURES=0"
+  },
+  {
+    "variant": "no_session",
+    "exitCode": 1,
+    "expectedPass": false,
+    "asExpected": true,
+    "summary": "CHECKS=95 FAILURES=6"
+  },
+  {
+    "variant": "no_confirmation",
+    "exitCode": 1,
+    "expectedPass": false,
+    "asExpected": true,
+    "summary": "CHECKS=84 FAILURES=12"
+  },
+  {
+    "variant": "no_dark_guard",
+    "exitCode": 1,
+    "expectedPass": false,
+    "asExpected": true,
+    "summary": "CHECKS=110 FAILURES=12"
+  },
+  {
+    "variant": "extra_quit",
+    "exitCode": 0,
+    "expectedPass": true,
+    "asExpected": true,
+    "summary": "CHECKS=104 FAILURES=0"
+  }
+]
