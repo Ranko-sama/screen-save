@@ -1,0 +1,2 @@
+#define IDI_TRAY_OFF 101
+#define IDI_TRAY_ON 102

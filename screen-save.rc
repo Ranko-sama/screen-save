@@ -1,0 +1,4 @@
+#include "resource.h"
+
+IDI_TRAY_OFF ICON "assets/tray/toggle-off.ico"
+IDI_TRAY_ON ICON "assets/tray/toggle-on.ico"

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="32 32 192 192" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">关闭调光 · 亮屏</title>
+  <desc id="desc">深灰色笔记本开关图标，左侧白色圆钮表示调光功能关闭，屏幕正常显示。</desc>
+  <rect x="44" y="80" width="168" height="80" rx="40" fill="#3F3F3F"/>
+  <path d="M43 166H213C215.5 166 216.5 168.3 215.1 170.4C211.7 175.3 206 177 200 177H56C50 177 44.3 175.3 40.9 170.4C39.5 168.3 40.5 166 43 166Z" fill="#3F3F3F"/>
+  <circle cx="84" cy="120" r="29" fill="#FFFFFF" stroke="#858585" stroke-width="1.5"/>
+</svg>

@@ -3,6 +3,7 @@
 #include <magnification.h>
 #include <wmistr.h>
 #include <cstring>
+#include "resource.h"
 
 constexpr UINT TrayMessage = WM_APP + 1;
 MAGCOLOREFFECT originalColors;
@@ -12,6 +13,8 @@ enum class DimmingMode { Matrix, Gamma };
 DimmingMode dimmingMode = DimmingMode::Matrix;
 bool isDark = false;
 int brightnessBeforeDark;
+HWND trayWindow;
+HICON trayIcons[2];
 
 // This laptop exposes one 296-byte WNODE with one display instance.
 // Native WMI exports are resolved locally; this is not a portable brightness API.
@@ -85,6 +88,16 @@ void ApplyOutput(DimmingMode mode, bool dark) {
     }
 }
 
+void UpdateTrayIcon() {
+    NOTIFYICONDATAW tray{};
+    tray.cbSize = sizeof(tray);
+    tray.hWnd = trayWindow;
+    tray.uID = 1;
+    tray.uFlags = NIF_ICON;
+    tray.hIcon = trayIcons[isDark ? 1 : 0];
+    Shell_NotifyIconW(NIM_MODIFY, &tray);
+}
+
 void ToggleBlack() {
     // Keep one restore snapshot for this dark session, including mode switches.
     if (!isDark) {
@@ -98,6 +111,7 @@ void ToggleBlack() {
     ApplyOutput(dimmingMode, isDark);
     SetThreadExecutionState(ES_CONTINUOUS |
         (isDark ? ES_SYSTEM_REQUIRED | ES_DISPLAY_REQUIRED : 0));
+    UpdateTrayIcon();
 }
 
 void SelectMode(DimmingMode mode) {
@@ -174,13 +188,20 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     OpenBrightness();
     MagInitialize();
     display = GetDC(nullptr);
+    trayWindow = window;
+    const int iconWidth = GetSystemMetrics(SM_CXSMICON);
+    const int iconHeight = GetSystemMetrics(SM_CYSMICON);
+    trayIcons[0] = static_cast<HICON>(LoadImageW(instance, MAKEINTRESOURCEW(IDI_TRAY_OFF),
+        IMAGE_ICON, iconWidth, iconHeight, LR_DEFAULTCOLOR));
+    trayIcons[1] = static_cast<HICON>(LoadImageW(instance, MAKEINTRESOURCEW(IDI_TRAY_ON),
+        IMAGE_ICON, iconWidth, iconHeight, LR_DEFAULTCOLOR));
     NOTIFYICONDATAW tray{};
     tray.cbSize = sizeof(tray);
     tray.hWnd = window;
     tray.uID = 1;
     tray.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
     tray.uCallbackMessage = TrayMessage;
-    tray.hIcon = LoadIconW(nullptr, IDI_APPLICATION);
+    tray.hIcon = trayIcons[0];
     wcscpy_s(tray.szTip, L"Screen Save · Ctrl+Alt+B 最暗/恢复");
     Shell_NotifyIconW(NIM_ADD, &tray);
     MSG message;
@@ -189,6 +210,8 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int) {
     }
     if (isDark) ToggleBlack();
     Shell_NotifyIconW(NIM_DELETE, &tray);
+    DestroyIcon(trayIcons[0]);
+    DestroyIcon(trayIcons[1]);
     MagUninitialize();
     ReleaseDC(nullptr, display);
     nativeClose(brightnessMethodBlock);
